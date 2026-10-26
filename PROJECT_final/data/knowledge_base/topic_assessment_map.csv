@@ -1,0 +1,29 @@
+course,topic,assessment
+TFB1013,Programming and Problem Solving (Week 1),Test 1; Quiz 1
+TFB1013,Algorithm and Program Design (Week 2),Test 1; Quiz 1
+TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1
+TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1
+TFB1013,Selection: switch Statement (Week 5),Test 1; Quiz 1
+TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1
+TFB1013,Arrays (Week 7),Test 2; Quiz 2
+TFB1013,Structures (Week 8),Test 2; Quiz 2
+TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2
+TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Test 2; Quiz 2
+TFB1013,File Handling (Week 11),Test 2; Quiz 2
+TFB2063,Introduction to Data Science (Week 1),Test 1; Quiz 1
+TFB2063,Data Exploration (Week 2),Test 1; Quiz 1
+TFB2063,Machine Learning in Data Science (Week 3),Test 1; Quiz 1
+TFB2063,Data Management and Manipulation with R (Week 4),Test 1; Quiz 1
+TFB2063,Dataframe Manipulations and Descriptive Analytics (Week 5),Test 1; Quiz 1
+TFB2063,"Imbalance Data, Scaling and Visualization (Week 6)",Test 2; Quiz 2
+TFB2063,Predictive Modelling: Linear Regression (Week 8),Test 2; Quiz 2
+TFB2063,Model Evaluation and Feature Selection (Week 9),Test 2; Quiz 2
+TFB2063,Decision Tree and K-means (Week 10),Test 2; Quiz 2
+TFB2033,Introduction to HCI and Interaction Design (Week 1),Test 1; Quiz 1
+TFB2033,Understanding and Conceptualizing Interaction (Week 2),Test 1; Quiz 1
+TFB2033,Understanding Users: Cognition (Week 3),Test 1; Quiz 1
+TFB2033,Interface Design (Week 4),Test 1; Quiz 1
+TFB2033,Understanding Needs and Establishing Requirements (Week 6),Test 2; Quiz 2
+TFB2033,Usability and Usability Engineering (Week 8),Test 2; Quiz 2
+TFB2033,Usability Testing (Week 8),Test 2; Quiz 2
+TFB2033,Expert Evaluation (Week 9),Test 2; Quiz 2

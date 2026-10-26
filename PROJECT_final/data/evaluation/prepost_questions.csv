@@ -1,0 +1,23 @@
+question_id,course,topic,question,option_a,option_b,option_c,option_d,correct_option
+P01,TFB1013,Programming and Problem Solving (Week 1),Which of these is a high-level language statement?,total = price * qty;,"ADD AX, BX",10110001 00000101,"MOV AL, 5",A
+P02,TFB1013,Programming and Problem Solving (Week 1),Which translator converts assembly language into machine language?,Interpreter,Assembler,Loader,Debugger,B
+P03,TFB1013,Algorithm and Program Design (Week 2),Which pseudocode operation stores the result of a calculation in a variable?,Receive information,Put out information,Assign a value,Repeat a group of actions,C
+P04,TFB1013,Algorithm and Program Design (Week 2),Which step comes first in the program design process?,Write the code,Test the program,Print the final report,Understand the problem,D
+P05,TFB1013,C++ Program Structure and Sequential Control (Week 3),What is the output of: int a = 10; int b = 4; cout << a / b;,2,2.5,3,0,A
+P06,TFB1013,C++ Program Structure and Sequential Control (Week 3),Which header file is needed to use cout?,<cmath>,<iostream>,<fstream>,<string>,B
+P07,TFB1013,Selection: if Statement (Week 4),"x = 7. What prints? if (x > 5) cout << ""A""; else cout << ""B"";",B,AB,A,Nothing,C
+P08,TFB1013,Selection: if Statement (Week 4),Which condition checks that n is not equal to 0?,n == 0,n = 0,n =! 0,n != 0,D
+P09,TFB1013,Selection: switch Statement (Week 5),"In a switch statement, what follows the word case?",A constant value and a colon,A condition such as x > 3,A variable name only,A semicolon,A
+P10,TFB1013,Selection: switch Statement (Week 5),char c = 'B'; switch (c) { case 'A': cout << 1; break; case 'B': cout << 2; break; default: cout << 3; } What prints?,1,2,3,23,B
+P11,TFB1013,Repetition: Loops (Week 6),How many times does this loop run? for (int i = 0; i < 5; i++),4,6,5,0,C
+P12,TFB1013,Repetition: Loops (Week 6),Which loop checks its condition after running the body?,while,for,if,do-while,D
+P13,TFB1013,Arrays (Week 7),"int a[4] = {5, 10, 15, 20}; What is a[3]?",20,15,4,Error,A
+P14,TFB1013,Arrays (Week 7),Which statement declares an array of 10 doubles named price?,double[10] price;,double price[10];,array price(10);,double price(10);,B
+P15,TFB1013,Structures (Week 8),"struct Point { int x; int y; }; Point p = {3, 4}; What is p.y?",3,7,4,Error,C
+P16,TFB1013,Structures (Week 8),Which keyword defines a structure?,record,structure,define,struct,D
+P17,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),What does return do in a function?,Sends a value back to the caller and ends the function,Prints a value on the screen,Declares the function,Repeats the function,A
+P18,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Which is a correct prototype for a function with two int parameters that returns an int?,"void add(int a, int b);","int add(int a, int b);","int add(a, b);","add(int, int) int;",B
+P19,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),A function changes its value parameter. Does the caller's variable change?,"Yes, always",Only if the function is void,"No, the function only changes a copy",Only if the variable is global,C
+P20,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Where is a global variable declared?,Inside main only,Inside the function that uses it,In the prototype,Outside all functions,D
+P21,TFB1013,File Handling (Week 11),Which statement opens a file named data.txt for writing?,"ofstream out(""data.txt"");","ifstream out(""data.txt"");","fstream.read(""data.txt"");",open data.txt for out;,A
+P22,TFB1013,File Handling (Week 11),What does if (!file) test after opening a file?,Whether the file is empty,Whether the file failed to open,Whether the file is closed,Whether the file has a name,B

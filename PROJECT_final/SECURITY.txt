@@ -1,0 +1,35 @@
+AILAF - SECURITY NOTES
+======================
+
+1. WHAT THE CODE DOES
+   - Student IDs must be 3 to 20 letters, numbers, - or _.
+   - Text saved to CSV files is cleaned so that a spreadsheet cannot run it as a formula.
+   - Resource links must start with http:// or https://.
+   - Only one write to a data file happens at a time.
+   - Streamlit XSRF protection is on and usage statistics are off (.streamlit/config.toml).
+   - Marks typed into the dashboard are not saved.
+   - The Question Review tab (it shows the test answer key) appears only in app_ekb.py, so run app.py for students.
+
+2. NO PASSWORD (important)
+   There is no login. Anyone who can open the app can see Evaluation > Results Summary
+   (all test scores, questionnaire answers and raw data downloads), and anyone who runs
+   app_ekb.py can edit the knowledge base.
+   - Use app.py for students and do not run app_ekb.py during a session.
+   - Before a student session, remember that students can open the Results Summary tab.
+   - Delete test data before the real session, and export and clear data afterwards.
+
+3. RUNNING A STUDENT SESSION
+   - On your own computer only:  streamlit run app.py
+   - To let students on the same Wi-Fi connect:  streamlit run app.py --server.address 0.0.0.0
+     Students open the Network URL that Streamlit prints. Do this only on a network you trust and stop the app when the session ends.
+   - The connection is plain HTTP (not encrypted), so collect nothing sensitive beyond the Student ID.
+
+4. DATA HANDLING
+   - Data files: data/evaluation/ (tests, questionnaires) and data/quiz_results.csv.
+   - Keep the project folder on your own computer, not in a public or shared online folder.
+   - Back up the data files, and delete them after the retention period in the consent form.
+   - The Student ID is removed before results are reported.
+
+5. NOT COVERED
+   - No login or user accounts, no encryption of the saved files, no activity log.
+   - Model files (.joblib) must only come from your own training run or this project. Never load model files from unknown sources.

@@ -1,0 +1,67 @@
+AILAF - FINAL CODE UPDATE
+=========================
+
+HOW TO USE
+1. Copy these files over your project folder (keep your data/oulad folder).
+2. Optional but recommended: run  python preprocessing.py  then  python train_models.py
+   (retrains the models with the libraries on your computer, about 2 to 3 minutes).
+   Do this if you see an error loading the .joblib model files.
+3. Run  streamlit run app.py        (student app)
+   or   streamlit run app_ekb.py    (same app + EKB Management for lecturers)
+
+NEW OR REPLACED FILES
+preprocessing.py            new label (later-assessment average), 4 marks
+train_models.py             replaces train_models, tune_xgboost, feature_importance, final_model_evaluation
+predictor.py                optional Test 2 / Quiz 2 (one model per mark combination)
+pdm.py                      CBL level rule, CA weakest assessment, UDL formats, explanations
+recommendation_engine.py    format filter, pathway order, assessment priority, "why" line
+ailaf_pipeline.py           command-line version
+app_core.py                 shared pages (Home, Dashboard, Evaluation, EKB, About)
+app.py / app_ekb.py         now only start app_core
+evaluation_tools.py         model performance, pre/post test, questionnaires, summary
+learning_content.py         small caption added
+
+DATA
+data/knowledge_base/learning_resources.csv   new column: assessment; 11 Advanced extension notes
+data/knowledge_base/topic_assessment_map.csv ASSUMPTION: Test 1/Quiz 1 = Weeks 1-6, Test 2/Quiz 2 = Weeks 7-11. Edit it to match your course outline.
+data/evaluation/prepost_questions.csv        22 pre/post test questions (separate from practice quizzes)
+data/processed/model_results/                trained models and evaluation results
+
+OLD FILES NO LONGER NEEDED
+tune_xgboost.py, feature_importance.py, final_model_evaluation.py (replaced by train_models.py)
+
+SECURITY UPDATE (no password)
+security.py                 input cleaning, ID and URL checks, write lock (NEW)
+SECURITY.txt                notes for running a session (NEW)
+.streamlit/config.toml      XSRF protection on, usage statistics off (NEW)
+app_core.py, evaluation_tools.py, learning_content.py   updated to use the security helpers
+
+EVALUATION UPDATE
+docs/AILAF_Evaluation_Instruments.docx          printable pre/post test, student and expert questionnaires, test review form, answer key
+docs/AILAF_Consent_and_Information_Sheet.docx   consent form and information sheet
+evaluation_tools.py   new Question Review tab (lecturer version only, because it shows the answer key);
+                      expert questionnaire has an optional 'Years of teaching experience' field;
+                      Results Summary shows the question reviews
+app_core.py           passes the lecturer-version setting to the Evaluation page
+The pre/post test, student questionnaire and expert questionnaire were already in the Evaluation page.
+
+EVALUATION UPDATE
+evaluation_tools.py         NEW Question Review tab (lecturer version only, shows the answer key);
+                            expert questionnaire has an optional years-of-experience field;
+                            Results Summary shows question review results and a download
+app_core.py                 passes the lecturer-version flag to the Evaluation page
+docs/AILAF_Evaluation_Instruments.docx   printable student test, student questionnaire, expert questionnaire,
+                            lecturer review form and answer key (same questions and statements as the app)
+docs/AILAF_Consent_and_Information_Sheet.docx   consent form and information sheet
+NOTE: run app_ekb.py (not app.py) for lecturers. The Question Review tab shows the correct answers,
+so it does not appear in app.py.
+
+COURSES UPDATE
+data/knowledge_base/learning_resources.csv   adds TFB2063 Data Science (9 topics, 36 resources) and TFB2033 Human Computer
+                            Interaction (8 topics, 32 resources). Per topic: key-points notes, a worked example, a practice
+                            exercise and a case study, summarised from the lecturers' slides. No quizzes or videos for these courses yet.
+data/knowledge_base/topic_assessment_map.csv   adds the new topics. ASSUMPTION: first half of each course = Test 1 and Quiz 1,
+                            second half = Test 2 and Quiz 2 (Data Science: Test 1 covers Weeks 1-5, Test 2 covers Weeks 6-10, from the outline).
+                            Ask each lecturer to confirm.
+app_core.py                 Learning Dashboard has a Course selector (TFB1013, TFB2063, TFB2033)
+NOTE: the pre-test and post-test question bank is still for TFB1013 only.

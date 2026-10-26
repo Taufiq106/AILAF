@@ -1,0 +1,131 @@
+{
+  "algorithm": "Random Forest",
+  "classes": [
+    "Beginner",
+    "Intermediate",
+    "Advanced"
+  ],
+  "main_scenario": "t1q1t2q2",
+  "scenarios": {
+    "t1q1": {
+      "features": [
+        "test1",
+        "quiz1"
+      ],
+      "accuracy": 0.6065505804311775,
+      "macro_f1": 0.5875993838358246
+    },
+    "t1q1t2": {
+      "features": [
+        "test1",
+        "quiz1",
+        "test2"
+      ],
+      "accuracy": 0.6500829187396352,
+      "macro_f1": 0.630425949387873
+    },
+    "t1q1q2": {
+      "features": [
+        "test1",
+        "quiz1",
+        "quiz2"
+      ],
+      "accuracy": 0.6616915422885572,
+      "macro_f1": 0.642848574341386
+    },
+    "t1q1t2q2": {
+      "features": [
+        "test1",
+        "quiz1",
+        "test2",
+        "quiz2"
+      ],
+      "accuracy": 0.6898839137645107,
+      "macro_f1": 0.6695460196207114
+    }
+  },
+  "rows": 12029,
+  "train_rows": 9617,
+  "test_rows": 2412,
+  "class_counts": {
+    "Advanced": 5416,
+    "Intermediate": 4999,
+    "Beginner": 1614
+  },
+  "report": {
+    "Beginner": {
+      "precision": 0.632996632996633,
+      "recall": 0.5856697819314641,
+      "f1-score": 0.6084142394822006,
+      "support": 321.0
+    },
+    "Intermediate": {
+      "precision": 0.6476377952755905,
+      "recall": 0.6463654223968566,
+      "f1-score": 0.6470009832841691,
+      "support": 1018.0
+    },
+    "Advanced": {
+      "precision": 0.7443130118289354,
+      "recall": 0.7623485554520038,
+      "f1-score": 0.7532228360957642,
+      "support": 1073.0
+    },
+    "accuracy": 0.6898839137645107,
+    "macro avg": {
+      "precision": 0.6749824800337197,
+      "recall": 0.6647945865934415,
+      "f1-score": 0.6695460196207114,
+      "support": 2412.0
+    },
+    "weighted avg": {
+      "precision": 0.6886961262333823,
+      "recall": 0.6898839137645107,
+      "f1-score": 0.6891194340745546,
+      "support": 2412.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      188,
+      113,
+      20
+    ],
+    [
+      99,
+      658,
+      261
+    ],
+    [
+      10,
+      245,
+      818
+    ]
+  ],
+  "cv": [
+    {
+      "Model": "Decision Tree",
+      "CV_Accuracy_Mean": 0.6583259107947387,
+      "CV_Accuracy_Std": 0.006433562343581075,
+      "CV_Macro_F1_Mean": 0.6387204159768143,
+      "CV_Macro_F1_Std": 0.006319854261335493
+    },
+    {
+      "Model": "Random Forest",
+      "CV_Accuracy_Mean": 0.678942629566071,
+      "CV_Accuracy_Std": 0.007303098966093036,
+      "CV_Macro_F1_Mean": 0.6590749405336044,
+      "CV_Macro_F1_Std": 0.005047514027067651
+    },
+    {
+      "Model": "XGBoost",
+      "CV_Accuracy_Mean": 0.6763654273878713,
+      "CV_Accuracy_Std": 0.007202582979201917,
+      "CV_Macro_F1_Mean": 0.6571858975078981,
+      "CV_Macro_F1_Std": 0.005427892940481313
+    }
+  ],
+  "label_rule": "average of later assessments: below 60 Beginner, below 80 Intermediate, otherwise Advanced",
+  "weights": "square-root balanced class weights",
+  "split": "student-grouped 80/20 split"
+}

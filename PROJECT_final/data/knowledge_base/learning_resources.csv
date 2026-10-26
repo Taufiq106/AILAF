@@ -1,0 +1,1168 @@
+resource_id,course,topic,assessment,competency_level,resource_title,resource_type,difficulty,learning_strategy,activity_type,resource_url,content
+TFB1013-R001,TFB1013,Programming and Problem Solving (Week 1),Test 1; Quiz 1,Beginner,"Why Program, Hardware/Software and Computer Languages (slides 6-16)",Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- A program is a set of instructions that tells the computer what to do.
+- Languages range from machine language (binary) to assembly language (symbolic codes) to high-level languages such as C++.
+- Machine language is the only language the CPU runs directly, so other languages must be translated.
+- A compiler translates the whole source program before it runs. An interpreter translates and runs it one statement at a time.
+- Structured programming builds programs from sequence, selection and repetition, so they are easier to read, test and maintain.
+
+*Source: TFB1013-WEEK1.pdf*"
+TFB1013-R002,TFB1013,Programming and Problem Solving (Week 1),Test 1; Quiz 1,Beginner,"Classifying Languages: Machine, Assembly and High-Level (slide 17 questions)",Worked Example,Basic,Foundational Learning,Guided Practice,,"**Classify the language level**
+
+```
+x = a + b          high-level (C++)
+ADD AX, BX         assembly
+10110001 00000101  machine language
+```
+All three do an addition. The high-level line is easiest to read and needs a compiler. The assembly line needs an assembler. Only the last line runs on the CPU as it is.
+
+*Source: TFB1013-WEEK1.pdf*"
+TFB1013-R003,TFB1013,Programming and Problem Solving (Week 1),Test 1; Quiz 1,Beginner,Self-Check Quiz: Compiler vs Interpreter and Structured Programming (slides 18-21),Quiz,Basic,Foundational Learning,Basic Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R004,TFB1013,Programming and Problem Solving (Week 1),Test 1; Quiz 1,Intermediate,Exercise: Match Real Problems to Automated Solutions (slides 9-10),Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+1. Classify each line as machine, assembly or high-level language: (a) MOV AL, 5  (b) 10110000 00000101  (c) cout << ""Hi"";
+2. For each one, name what translates it (assembler, compiler or interpreter).
+3. List two everyday problems that a program could solve automatically, with the input and output of each.
+
+**Answer key:** (a) assembly, (b) machine, (c) high-level. Assembly needs an assembler, machine code needs no translation, C++ needs a compiler."
+TFB1013-R005,TFB1013,Programming and Problem Solving (Week 1),Test 1; Quiz 1,Intermediate,Application Quiz: Choosing a Language Level and Translator for a Task,Quiz,Intermediate,Reinforcement and Guided Practice,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R006,TFB1013,Programming and Problem Solving (Week 1),Test 1; Quiz 1,Advanced,Case Study: Why Structured Programming Replaced Unstructured Code,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+Team A wrote a tool in an interpreted language. Team B wrote the same tool in compiled C++.
+
+**Questions**
+1. Whose syntax errors are reported before the program starts running?
+2. Who can change one line and test it immediately without a build step?
+3. Which will usually run faster, and why?
+
+**Discussion points:** 1. Team B (compile time). 2. Team A. 3. Team B, because the code is already translated to machine code."
+TFB1013-R007,TFB1013,Programming and Problem Solving (Week 1),Test 1; Quiz 1,Advanced,Mini Project: Compare Compiled and Interpreted Tools in a Short Report,Project,Advanced,Extension and Challenging Application,Project-Based Activity,,"**Mini project**
+Write a one-page report comparing a compiled and an interpreted language.
+
+**Include**
+- How each is translated and run
+- Speed and error detection
+- A comparison table and one example use for each
+- A short conclusion"
+TFB1013-R008,TFB1013,Algorithm and Program Design (Week 2),Test 1; Quiz 1,Beginner,Program Design Process: Pseudocode and Flowcharts (slides 8-21),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- An algorithm is a finite sequence of steps that solves a problem. It can be written as pseudocode or drawn as a flowchart.
+- Pseudocode is a semi-formal, English-like description. A flowchart uses symbols: terminal, input/output, process, decision and flow lines.
+- Pseudocode uses six basic operations: receive information, put out information, perform arithmetic, assign a value, compare two values and choose one of two actions, and repeat a group of actions.
+- The design process: understand the problem (inputs, processing, outputs), develop the algorithm, desk check it, code it, then test and debug.
+- Desk checking means tracing the algorithm by hand with sample data before writing code.
+
+*Source: lecture2.pdf*"
+TFB1013-R009,TFB1013,Algorithm and Program Design (Week 2),Test 1; Quiz 1,Beginner,Active Learning Exercises 1 and 2: Problem Solving Phase (slides 9-13),Worked Example,Basic,Foundational Learning,Guided Practice,,"**Average of three numbers**
+
+```
+Read n1, n2, n3
+sum = n1 + n2 + n3
+average = sum / 3
+Print average
+```
+Desk check with 10, 20, 30: sum = 60, average = 20, output 20.
+
+*Source: lecture2.pdf*"
+TFB1013-R010,TFB1013,Algorithm and Program Design (Week 2),Test 1; Quiz 1,Beginner,Self-Check Quiz: Pseudocode Operations and Flowchart Symbols (slides 15-20),Quiz,Basic,Foundational Learning,Basic Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R011,TFB1013,Algorithm and Program Design (Week 2),Test 1; Quiz 1,Intermediate,Exercises: Develop Algorithms for the Given Problems (slide 33),Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Write pseudocode and draw a flowchart that reads a student's mark and prints ""Pass"" if the mark is 50 or more, otherwise ""Fail"". Desk check it with marks 65 and 40.
+
+**Answer key:** 65 prints Pass, 40 prints Fail. The flowchart needs one decision diamond with Yes and No branches."
+TFB1013-R012,TFB1013,Algorithm and Program Design (Week 2),Test 1; Quiz 1,Intermediate,Application Quiz: Desk Checking and Syntax Testing (slides 21-26),Quiz,Intermediate,Reinforcement and Guided Practice,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R013,TFB1013,Algorithm and Program Design (Week 2),Test 1; Quiz 1,Advanced,Case Study: Top-Down Design of a Larger Problem (slides 31-32),Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+You must design a library system with borrow, return, and fine calculation.
+
+**Questions**
+1. Break it into modules using top-down design.
+2. List the inputs and outputs of each module.
+3. Which modules need selection and which need repetition?
+
+**Discussion points:** e.g. register member, borrow book, return book, calculate fine. The fine module needs selection (late or not). Listing all books needs repetition."
+TFB1013-R014,TFB1013,Algorithm and Program Design (Week 2),Test 1; Quiz 1,Advanced,Mini Project: Document a Full Program Design from Requirements to Testing (slides 22-30),Project,Advanced,Extension and Challenging Application,Project-Based Activity,,"**Mini project**
+Pick a problem, for example a ticket price calculator, and document the full design.
+
+**Include**
+- Problem definition with an input / processing / output table
+- Pseudocode and flowchart
+- Desk check with two test cases and the expected output"
+TFB1013-R015,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Beginner,"Parts of a C++ Program, Variables and Data Types (slides 9-35)",Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- A C++ program has preprocessor directives (#include <iostream>), a namespace line (using namespace std;) and a main() function where execution starts.
+- Statements end with a semicolon. C++ is case sensitive.
+- Identifiers use letters, digits and underscores, cannot start with a digit and cannot be keywords.
+- Common data types: int, float, double, char, bool, string.
+- cin >> reads input, cout << prints output, and = assigns the right-hand value to the left-hand variable.
+- Arithmetic operators are + - * / %. Integer division drops the fraction. Precedence: parentheses, then * / %, then + -.
+
+*Source: 3.pdf*"
+TFB1013-R016,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Beginner,"Input, Output and Assignment Statements with cin and cout (slides 38-43)",Worked Example,Basic,Foundational Learning,Guided Practice,,"**Read two integers and print the sum**
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    cout << ""Enter two integers: "";
+    cin >> a >> b;
+    cout << ""Sum = "" << a + b << endl;
+    return 0;
+}
+```
+Input 4 and 6 gives: Sum = 10
+
+*Source: 3.pdf*"
+TFB1013-R017,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Beginner,"Self-Check Quiz: Valid Identifiers and Basic Data Types (slides 17-18, 25-34)",Quiz,Basic,Foundational Learning,Basic Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R018,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Intermediate,"Exercise: Arithmetic Operators, Precedence and Increment (slides 44-49)",Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+1. Write a program that reads the price (double) and quantity (int) of an item and prints the total.
+2. Work out by hand: int x = 7 / 2;  int y = 7 % 2;  double z = 7 / 2.0;  int a = 5; int b = a++ + 2;
+
+**Answer key:** x = 3, y = 1, z = 3.5, b = 7 and a = 6."
+TFB1013-R019,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Intermediate,Application Quiz: Relational and Logical Operators (slides 50-51),Quiz,Intermediate,Reinforcement and Guided Practice,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R020,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Advanced,Case Study: Integer Division and Data Type Results in Calculations (slide 47),Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+A shop program computes average = total / count, with both variables int. For total = 7 and count = 2 it prints 3 instead of 3.5.
+
+**Questions**
+1. Explain why.
+2. Give two fixes and say which you prefer.
+
+**Discussion points:** integer division drops the fraction. Fix: declare total as double, or cast: (double)total / count. Declaring as double is simpler."
+TFB1013-R021,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Advanced,Mini Project: Write a Sequential Billing Calculator Program,Project,Advanced,Extension and Challenging Application,Project-Based Activity,,"**Mini project**
+Write a sequential billing calculator.
+
+**Requirements**
+- Input unit price, quantity and discount percent
+- Calculate subtotal, discount, 6% tax and total
+- Print a formatted bill
+- Test with three different inputs"
+TFB1013-R022,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Beginner,"Selection Control Structure: Single, Double and Multiple (slides 4-10)",Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- Selection lets a program choose between actions depending on a condition.
+- Forms: single (if), double (if-else) and multiple (if-else if chain or nested if).
+- Conditions use relational operators (<, >, <=, >=, ==, !=) and logical operators (&&, ||, !).
+- = assigns and == compares. Writing if (x = 5) is a common bug.
+- An else belongs to the nearest unmatched if, so use braces to make the structure clear.
+- A compound condition with && can often replace a nested if.
+
+*Source: L4.pdf*"
+TFB1013-R023,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Beginner,if/else with Flowchart and Modulus Examples (slides 17-19),Worked Example,Basic,Foundational Learning,Guided Practice,,"**Grade with if / else if / else**
+
+```cpp
+if (mark >= 80)
+    cout << ""A"";
+else if (mark >= 60)
+    cout << ""B"";
+else
+    cout << ""C"";
+```
+mark = 65 prints B. Even or odd: if (n % 2 == 0) is true when n is even.
+
+*Source: L4.pdf*"
+TFB1013-R024,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Beginner,Quiz 1 Activity: Design a Flowchart Algorithm (slides 11-12),Quiz,Basic,Foundational Learning,Basic Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R025,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Intermediate,Exercise: Nested if Grade Determination (slides 20-26),Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Write a nested if program that reads a mark and prints the grade: A for 80 or more, B for 65 to 79, C for 50 to 64, F below 50. Test with 85, 70, 50 and 49.
+
+**Answer key:** A, B, C, F."
+TFB1013-R026,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Intermediate,Application Quiz: Compound Conditions with && and || (slides 27-32),Quiz,Intermediate,Reinforcement and Guided Practice,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R027,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Advanced,Case Study: Rewriting Deeply Nested if Statements as Compound Conditions,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+This code is hard to read:
+
+```cpp
+if (age >= 18) {
+    if (hasLicense) {
+        if (!suspended) {
+            cout << ""Allowed"";
+        }
+    }
+}
+```
+
+**Questions**
+1. Rewrite it as one compound condition.
+2. Which version is easier to maintain and why?
+
+**Answer:** if (age >= 18 && hasLicense && !suspended)"
+TFB1013-R028,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Advanced,Mini Project: Decision Program such as Ticket Pricing or Loan Eligibility,Project,Advanced,Extension and Challenging Application,Project-Based Activity,,"**Mini project**
+Write a ticket pricing program using if / else.
+
+**Requirements**
+- Inputs: age, weekday or weekend, student or not
+- At least 3 pricing rules using compound conditions
+- A table of at least 6 test cases with expected prices"
+TFB1013-R029,TFB1013,Selection: switch Statement (Week 5),Test 1; Quiz 1,Beginner,"switch Statement: Format, Requirements and How It Works (slides 7-13)",Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- switch compares an int or char expression against constant case labels.
+- break leaves the switch. Without it, execution falls through into the next case.
+- default runs when no case matches and is optional.
+- Case labels must be constants. Ranges, variables, doubles and strings are not allowed.
+- switch suits menus and fixed choices. Use if-else for ranges.
+
+*Source: lecturenotes.pdf*"
+TFB1013-R030,TFB1013,Selection: switch Statement (Week 5),Test 1; Quiz 1,Beginner,break and default Statements: Class Program Example 5.2 (slides 14-17),Worked Example,Basic,Foundational Learning,Guided Practice,,"**Grade message with switch**
+
+```cpp
+char grade;
+cin >> grade;
+switch (grade) {
+    case 'A': cout << ""Excellent""; break;
+    case 'B': cout << ""Good"";      break;
+    default:  cout << ""Invalid"";
+}
+```
+Input B prints Good. Without break, B would also run the default line.
+
+*Source: lecturenotes.pdf*"
+TFB1013-R031,TFB1013,Selection: switch Statement (Week 5),Test 1; Quiz 1,Beginner,Self-Check Quiz: switch Rules and break Behaviour (slides 12-14),Quiz,Basic,Foundational Learning,Basic Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R032,TFB1013,Selection: switch Statement (Week 5),Test 1; Quiz 1,Intermediate,Active Learning Exercises 1 and 2 (slides 23-27),Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+1. Predict the output when x = 2: switch (x) { case 1: cout << ""A""; case 2: cout << ""B""; case 3: cout << ""C""; break; default: cout << ""D""; }
+2. Write a program that reads a month number (1 to 12) and prints the number of days using switch. Group the cases that share an answer.
+
+**Answer key:** 1. BC (no break after case 2, so it falls into case 3). 2. 31 days for 1,3,5,7,8,10,12; 30 for 4,6,9,11; 28 for 2."
+TFB1013-R033,TFB1013,Selection: switch Statement (Week 5),Test 1; Quiz 1,Intermediate,Application Quiz: Converting if-else Chains to switch (slides 19-22),Quiz,Intermediate,Reinforcement and Guided Practice,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R034,TFB1013,Selection: switch Statement (Week 5),Test 1; Quiz 1,Advanced,Case Study: Menu-Driven Systems with switch (slide 18),Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+An ATM menu: 1 Balance, 2 Deposit, 3 Withdraw, 4 Exit.
+
+**Questions**
+1. Why is switch a good fit here?
+2. What should happen when the user enters 9?
+3. Where does default go and what does it print?
+
+**Discussion points:** fixed integer choices; default prints an invalid-option message and the menu repeats."
+TFB1013-R035,TFB1013,Selection: switch Statement (Week 5),Test 1; Quiz 1,Advanced,Mini Project: Build a Menu-Driven Calculator Using switch,Project,Advanced,Extension and Challenging Application,Project-Based Activity,,"**Mini project**
+Write a menu-driven calculator using switch on the operator (+, -, *, /).
+
+**Requirements**
+- Handle divide by zero and invalid operators (default)
+- Repeat until the user chooses to quit (use do-while)"
+TFB1013-R036,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Beginner,"while, do-while and for Loops (slides 12-38)",Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- Repetition runs statements again and again while a condition holds.
+- while is a pretest loop and may run zero times. do-while is a posttest loop and always runs at least once. for is used when the number of repeats is known: for (init; condition; update).
+- An infinite loop happens when the condition never becomes false, usually because the update is missing.
+- Prefix ++x increments before the value is used. Postfix x++ increments after.
+- In nested loops the inner loop finishes completely for each pass of the outer loop. Used for tables and patterns.
+
+*Source: loop.pdf*"
+TFB1013-R037,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Beginner,"Loop Programs: while, do-while and for Examples (slides 17-18, 24-25, 29-33)",Worked Example,Basic,Foundational Learning,Guided Practice,,"**for and while**
+
+```cpp
+for (int i = 1; i <= 5; i++)
+    cout << i << "" "";        // 1 2 3 4 5
+
+int n = 3;
+while (n > 0) {
+    cout << n << "" "";        // 3 2 1
+    n--;
+}
+```
+
+*Source: loop.pdf*"
+TFB1013-R038,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Beginner,"Self-Check Quiz: Prefix vs Postfix and Infinite Loops (slides 9-11, 20)",Quiz,Basic,Foundational Learning,Basic Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R039,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Intermediate,Exercise: Multiplication Table of 5 Using a for Loop (slide 39),Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Print the multiplication table of 5 (5 x 1 up to 5 x 12) using a for loop. Then rewrite it using a while loop and check both give the same output.
+
+**Answer key:** 5, 10, 15 ... 60."
+TFB1013-R040,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Intermediate,Application Quiz: Deciding Which Loop to Use (slide 40),Quiz,Intermediate,Reinforcement and Guided Practice,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R041,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Advanced,Case Study: Nested Loops for Repeated Output (slides 41-49),Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+This nested loop prints a star triangle:
+
+```cpp
+for (int i = 1; i <= 4; i++) {
+    for (int j = 1; j <= i; j++)
+        cout << ""*"";
+    cout << endl;
+}
+```
+
+**Questions**
+1. Trace the output.
+2. How many stars are printed in total?
+3. How many times does the inner body run?
+
+**Answer:** rows of 1, 2, 3, 4 stars. Total 10. Inner body runs 10 times."
+TFB1013-R042,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Advanced,Mini Project: Star Pattern Generator with Nested for Loops (slides 58-63),Project,Advanced,Extension and Challenging Application,Project-Based Activity,,"**Mini project**
+Write a star pattern generator.
+
+**Requirements**
+- User enters n between 1 and 10 (validate it with a loop)
+- Print a right triangle, an inverted triangle and a pyramid using nested for loops"
+TFB1013-R043,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Beginner,"Declaring, Initializing and Accessing Arrays (slides 9-18)",Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- An array stores a fixed number of values of the same type, for example int tests[5];
+- The first index is 0 and the last is size - 1. C++ does not check the range, so going past the end is undefined behaviour.
+- Initialization list: int tests[5] = {79, 82, 91, 77, 84}; Fewer values means the rest become 0. More values than the size is an error.
+- Use a loop to process every element.
+- Parallel arrays keep related data at the same index. A 2D array int m[rows][cols] uses two indexes and nested loops.
+
+*Source: array.pdf*"
+TFB1013-R044,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Beginner,Accessing Array Elements: Class Program Example 7.2 (slides 19-20),Worked Example,Basic,Foundational Learning,Guided Practice,,"**Average of an array**
+
+```cpp
+const int SIZE = 5;
+int tests[SIZE] = {79, 82, 91, 77, 84};
+int sum = 0;
+for (int i = 0; i < SIZE; i++)
+    sum += tests[i];
+cout << sum / (double)SIZE;   // 413 / 5 = 82.6
+```
+
+*Source: array.pdf*"
+TFB1013-R045,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Beginner,Self-Check Quiz: Array Declaration and Partial Initialization (slides 13-17),Quiz,Basic,Foundational Learning,Basic Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R046,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Intermediate,"Exercise: Parallel Arrays, Class Program Example 7.3 (slides 23-26)",Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Declare two parallel arrays, names[3] and marks[3]. Read the marks, print each name with its mark, then find and print the name with the highest mark.
+
+**Hint:** keep the index of the highest mark, then use it for both arrays."
+TFB1013-R047,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Intermediate,Application Quiz: Processing Arrays with Loops (slides 21-22),Quiz,Intermediate,Reinforcement and Guided Practice,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R048,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Advanced,Case Study: Two-Dimensional Arrays (slides 27-36),Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+Marks of 3 students in 4 assessments are stored in int marks[3][4].
+
+**Questions**
+1. How do you compute each student's average?
+2. How do you find the highest mark of each assessment?
+3. Which loop is the outer loop in each case?
+
+**Discussion points:** student average: outer loop over rows. Assessment maximum: outer loop over columns."
+TFB1013-R049,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Advanced,Mini Project: Student Marks Table Using a 2D Array,Project,Advanced,Extension and Challenging Application,Project-Based Activity,,"**Mini project**
+Student marks table using a 2D array.
+
+**Requirements**
+- Input marks for 5 students x 4 assessments
+- Output each student's total and average and the highest mark overall
+- Display everything as a neat table"
+TFB1013-R050,TFB1013,Structures (Week 8),Test 2; Quiz 2,Beginner,Defining and Declaring a struct (slides 5-12),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- A struct groups variables of different types under one name (a record).
+- Define: struct Student { string name; int id; double mark; }; The semicolon after the closing brace is required.
+- Members are accessed with the dot operator: s1.name.
+- Whole structs cannot be compared with ==. Compare member by member.
+- s2 = s1 copies every member.
+- Structs can be put in arrays and inside other structs.
+
+*Source: lecturenotes2.pdf*"
+TFB1013-R051,TFB1013,Structures (Week 8),Test 2; Quiz 2,Beginner,Accessing Members with the Dot Operator (slides 13-15),Worked Example,Basic,Foundational Learning,Guided Practice,,"**Define and use a struct**
+
+```cpp
+struct Student {
+    string name;
+    int id;
+    double mark;
+};
+
+Student s1 = {""Ali"", 101, 85.5};
+cout << s1.name << "" "" << s1.mark;   // Ali 85.5
+```
+
+*Source: lecturenotes2.pdf*"
+TFB1013-R052,TFB1013,Structures (Week 8),Test 2; Quiz 2,Beginner,"Self-Check Quiz: struct Declaration Rules and Displaying a struct (slides 10-12, 19-21)",Quiz,Basic,Foundational Learning,Basic Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R053,TFB1013,Structures (Week 8),Test 2; Quiz 2,Intermediate,"Exercise: Arrays of Structures, Class Program Example 8.2 (slides 22-27)",Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Define struct Book with title, price and quantity. Create an array of 3 books, read the data, print the total value (sum of price x quantity) and the title of the most expensive book."
+TFB1013-R054,TFB1013,Structures (Week 8),Test 2; Quiz 2,Intermediate,Application Quiz: Comparing struct Variables (slides 20-21),Quiz,Intermediate,Reinforcement and Guided Practice,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R055,TFB1013,Structures (Week 8),Test 2; Quiz 2,Advanced,Case Study: Nested Structures for Complex Records (slides 28-31),Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+An employee record needs name and office address (street, city).
+
+**Questions**
+1. Design a nested struct for it.
+2. Write the expression for the city of employee e.
+3. Why use a nested struct rather than putting everything in one flat struct?
+
+**Answer:** struct Address { string street, city; }; struct Employee { string name; Address office; }; e.office.city. Nesting keeps related data together and lets you reuse Address."
+TFB1013-R056,TFB1013,Structures (Week 8),Test 2; Quiz 2,Advanced,Mini Project: Student Record System Using an Array of Structures,Project,Advanced,Extension and Challenging Application,Project-Based Activity,,"**Mini project**
+Student record system using an array of structs.
+
+**Requirements**
+- struct Student with name, id and mark; array of 5
+- Menu: input, display all, search by id, show highest mark"
+TFB1013-R057,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Beginner,Modular Programming and Predefined Functions (slides 7-16),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- Functions split a program into modules. main() calls them.
+- Predefined functions come from libraries, for example sqrt and pow in <cmath>.
+- A function has a name, parameters and a return type. A prototype declares it before main: double average(double a, double b);
+- A call passes arguments and the return statement sends a value back.
+- Benefits: reuse, easier testing and easier maintenance.
+
+*Source: functions1.pdf*"
+TFB1013-R058,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Beginner,Class Program Example 9.1: Calling a Function (slides 15-17),Worked Example,Basic,Foundational Learning,Guided Practice,,"**Predefined and user-defined function**
+
+```cpp
+#include <cmath>
+
+double hyp = sqrt(pow(3, 2) + pow(4, 2));   // 5
+
+int square(int x) { return x * x; }
+cout << square(4);                          // 16
+```
+
+*Source: functions1.pdf*"
+TFB1013-R059,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Beginner,Self-Check Quiz: Function Return Types and Prototypes (slides 14-18),Quiz,Basic,Foundational Learning,Basic Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R060,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Intermediate,"Exercise: Using sqrt and pow from cmath, Example 9.2 (slides 19-22)",Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Use sqrt and pow from <cmath> to compute the distance between points (1, 2) and (4, 6). Then wrap it in a function: double distance(double x1, double y1, double x2, double y2).
+
+**Answer key:** sqrt(3^2 + 4^2) = 5."
+TFB1013-R061,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Intermediate,Application Quiz: Identifying Inputs and Outputs of a Function (slides 23-27),Quiz,Intermediate,Reinforcement and Guided Practice,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R062,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Advanced,"Case Study: Breaking a Program into Modules (slides 7-8, 28-33)",Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+A 40-line main() calculates tax, discount and the final total in one block.
+
+**Questions**
+1. Propose a split into functions.
+2. State the inputs and the return value of each function.
+3. How does this help testing?
+
+**Discussion points:** e.g. getPrice, calcDiscount(price), calcTax(price), displayBill(...). Each function can be tested on its own with sample values."
+TFB1013-R063,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Advanced,Mini Project: Convert a Single-Block Program into Modular Functions,Project,Advanced,Extension and Challenging Application,Project-Based Activity,,"**Mini project**
+Convert a single-block program into modular functions.
+
+**Requirements**
+- Start from a grade calculator written entirely in main()
+- Split into getMarks, calcAverage, getGrade and display
+- Put the prototypes above main()"
+TFB1013-R064,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Test 2; Quiz 2,Beginner,"Function Definition: Header, Body and Types of Functions (slides 5-11)",Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- A function header has a return type, a name and a parameter list. The body is in braces.
+- void functions return nothing. Non-void functions return a value with return.
+- Value parameter: the function gets a copy, so the original is unchanged. Reference parameter (&): the function changes the original.
+- Scope: a local variable exists only inside its block. A global variable is declared outside all functions and is visible everywhere, but any function can change it, which makes bugs hard to trace.
+- Prefer parameters and return values over global variables.
+
+*Source: function2.pdf*"
+TFB1013-R065,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Test 2; Quiz 2,Beginner,Call by Value vs Call by Reference: getData and swap (slides 12-14),Worked Example,Basic,Foundational Learning,Guided Practice,,"**Swap with reference parameters**
+
+```cpp
+void swapValues(int &a, int &b) {
+    int t = a;
+    a = b;
+    b = t;
+}
+
+int main() {
+    int x = 1, y = 2;
+    swapValues(x, y);
+    cout << x << y;      // 21
+}
+```
+
+*Source: function2.pdf*"
+TFB1013-R066,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Test 2; Quiz 2,Beginner,Self-Check Quiz: Void vs Non-Void Functions (slides 8-9),Quiz,Basic,Foundational Learning,Basic Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R067,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Test 2; Quiz 2,Intermediate,Exercises: Trace the Output of Programs with Functions (slides 22-24),Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Trace the output:
+
+```cpp
+void change(int &v)   { v += 3; }
+void noChange(int v)  { v += 3; }
+int main() {
+    int a = 5;
+    change(a);
+    noChange(a);
+    cout << a;
+}
+```
+
+**Answer key:** 8. change works on the original (5 + 3). noChange works on a copy."
+TFB1013-R068,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Test 2; Quiz 2,Intermediate,Application Quiz: Variable Scope and Global Variables (slides 15-18),Quiz,Intermediate,Reinforcement and Guided Practice,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R069,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Test 2; Quiz 2,Advanced,Case Study: Pitfalls of Global Variables (slides 17-18),Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+A program keeps a global variable total that three functions modify. The final total is wrong.
+
+**Questions**
+1. Why is this bug hard to find?
+2. How would you redesign it?
+
+**Discussion points:** any function can change the global at any time, so the cause is unclear. Pass values as parameters and return results, or use reference parameters."
+TFB1013-R070,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Test 2; Quiz 2,Advanced,Mini Project: Solve a 2x2 Linear Equation Using Functions (slide 27),Project,Advanced,Extension and Challenging Application,Project-Based Activity,,"**Mini project**
+Solve a 2 x 2 linear system ax + by = e, cx + dy = f using functions.
+
+**Requirements**
+- getCoefficients using reference parameters
+- determinant function and a solve function
+- Handle the case where the determinant is 0"
+TFB1013-R071,TFB1013,File Handling (Week 11),Test 2; Quiz 2,Beginner,"File Operations, Streams and Open Modes (slides 3-14)",Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- Include <fstream>. Use ifstream for input, ofstream for output and fstream for both.
+- Open with file.open(""name.txt"") or in the constructor. Check for failure with if (!file).
+- Modes: ios::in, ios::out, ios::app (append), ios::binary.
+- Read until the end with while (file >> x), or use eof(). getline reads a whole line.
+- Close with file.close().
+- Pass file streams to functions by reference.
+
+*Source: files.pdf*"
+TFB1013-R072,TFB1013,File Handling (Week 11),Test 2; Quiz 2,Beginner,Reading and Writing Text Files: Class Program Example 12.1 (slides 15-25),Worked Example,Basic,Foundational Learning,Guided Practice,,"**Write then read a text file**
+
+```cpp
+#include <fstream>
+
+ofstream out(""class.txt"");
+out << ""Ali 85\n"";
+out.close();
+
+ifstream in(""class.txt"");
+string name; int m;
+while (in >> name >> m)
+    cout << name << "" "" << m;    // Ali 85
+in.close();
+```
+
+*Source: files.pdf*"
+TFB1013-R073,TFB1013,File Handling (Week 11),Test 2; Quiz 2,Beginner,"Self-Check Quiz: ifstream vs ofstream and File Access Flags (slides 5-9, 13)",Quiz,Basic,Foundational Learning,Basic Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R074,TFB1013,File Handling (Week 11),Test 2; Quiz 2,Intermediate,"Exercise: Passing File Streams to Functions, Example 12.2 (slides 26-28)",Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Write void readMarks(ifstream &in, int m[], int &count) that reads marks from a file until the end and sets count. In main, open ""marks.txt"", call the function and print the marks and their average."
+TFB1013-R075,TFB1013,File Handling (Week 11),Test 2; Quiz 2,Intermediate,Application Quiz: getline and Single Character I/O (slides 29-32),Quiz,Intermediate,Reinforcement and Guided Practice,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R076,TFB1013,File Handling (Week 11),Test 2; Quiz 2,Advanced,Case Study: Text vs Binary Files and Random Access (slides 33-43),Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+You must store 1000 student records.
+
+**Questions**
+1. Compare a text file with a binary file for readability and size.
+2. When does random access matter?
+
+**Discussion points:** text files are readable and easy to debug but larger and slower to parse. Binary files are smaller and faster, and allow jumping directly to a record. Random access matters when you update one record in a large file."
+TFB1013-R077,TFB1013,File Handling (Week 11),Test 2; Quiz 2,Advanced,Mini Project: Save and Load Student Records from a File,Project,Advanced,Extension and Challenging Application,Project-Based Activity,,"**Mini project**
+Save and load student records using a text file.
+
+**Requirements**
+- Menu: add student (append to file), list all, search by name
+- Handle the file-not-found case
+- Close the file after each operation"
+TFB1013-R078,TFB1013,Programming and Problem Solving (Week 1),Test 1; Quiz 1,Beginner,YouTube: C++ Full Course for Beginners (Learn C++ in 10 hours),Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=GQp1zzTwrIg,
+TFB1013-R079,TFB1013,Programming and Problem Solving (Week 1),Test 1; Quiz 1,Beginner,W3Schools: C++ Introduction,Lecture Notes,Basic,Foundational Learning,Concept Review,https://www.w3schools.com/cpp/cpp_intro.asp,
+TFB1013-R080,TFB1013,Programming and Problem Solving (Week 1),Test 1; Quiz 1,Beginner,W3Schools: C++ Get Started (Install and First Program),Lecture Notes,Basic,Foundational Learning,Guided Practice,https://www.w3schools.com/cpp/cpp_getstarted.asp,
+TFB1013-R081,TFB1013,Programming and Problem Solving (Week 1),Test 1; Quiz 1,Intermediate,W3Schools: C++ Quiz,Quiz,Intermediate,Reinforcement and Guided Practice,Application Quiz,https://www.w3schools.com/cpp/cpp_quiz.asp,
+TFB1013-R082,TFB1013,Algorithm and Program Design (Week 2),Test 1; Quiz 1,Intermediate,W3Schools: C++ Examples (practice translating algorithms into code),Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,https://www.w3schools.com/cpp/cpp_examples.asp,
+TFB1013-R083,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Beginner,YouTube: C++ Full Course for Beginners (Learn C++ in 10 hours),Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=GQp1zzTwrIg,
+TFB1013-R084,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Beginner,W3Schools: C++ Syntax,Lecture Notes,Basic,Foundational Learning,Concept Review,https://www.w3schools.com/cpp/cpp_syntax.asp,
+TFB1013-R085,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Beginner,W3Schools: C++ Variables,Lecture Notes,Basic,Foundational Learning,Concept Review,https://www.w3schools.com/cpp/cpp_variables.asp,
+TFB1013-R086,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Beginner,W3Schools: C++ User Input (cin),Lecture Notes,Basic,Foundational Learning,Guided Practice,https://www.w3schools.com/cpp/cpp_user_input.asp,
+TFB1013-R087,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Beginner,W3Schools: C++ Data Types,Lecture Notes,Basic,Foundational Learning,Concept Review,https://www.w3schools.com/cpp/cpp_data_types.asp,
+TFB1013-R088,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Beginner,W3Schools: C++ Operators,Lecture Notes,Basic,Foundational Learning,Concept Review,https://www.w3schools.com/cpp/cpp_operators.asp,
+TFB1013-R089,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Intermediate,W3Schools: Variables Code Challenge,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,https://www.w3schools.com/cpp/cpp_challenges_variables.asp,
+TFB1013-R090,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Intermediate,W3Schools: Data Types Code Challenge,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,https://www.w3schools.com/cpp/cpp_challenges_data_types.asp,
+TFB1013-R091,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Intermediate,W3Schools: Operators Code Challenge,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,https://www.w3schools.com/cpp/cpp_challenges_operators.asp,
+TFB1013-R092,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Advanced,W3Schools: Real-Life Examples of Variables,Case Study,Advanced,Extension and Challenging Application,Case Study,https://www.w3schools.com/cpp/cpp_variables_reallife.asp,
+TFB1013-R093,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Beginner,W3Schools: C++ If...Else,Lecture Notes,Basic,Foundational Learning,Concept Review,https://www.w3schools.com/cpp/cpp_conditions.asp,
+TFB1013-R094,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Beginner,W3Schools: C++ else if,Lecture Notes,Basic,Foundational Learning,Guided Practice,https://www.w3schools.com/cpp/cpp_conditions_elseif.asp,
+TFB1013-R095,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Intermediate,W3Schools: C++ Nested if,Lecture Notes,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.w3schools.com/cpp/cpp_conditions_nested.asp,
+TFB1013-R096,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Intermediate,W3Schools: C++ Logical Operators in Conditions,Lecture Notes,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.w3schools.com/cpp/cpp_conditions_logical.asp,
+TFB1013-R097,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Intermediate,W3Schools: Conditions Code Challenge,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,https://www.w3schools.com/cpp/cpp_challenges_conditions.asp,
+TFB1013-R098,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Advanced,W3Schools: Real-Life Examples of Conditions,Case Study,Advanced,Extension and Challenging Application,Case Study,https://www.w3schools.com/cpp/cpp_conditions_reallife.asp,
+TFB1013-R099,TFB1013,Selection: switch Statement (Week 5),Test 1; Quiz 1,Beginner,W3Schools: C++ Switch,Lecture Notes,Basic,Foundational Learning,Concept Review,https://www.w3schools.com/cpp/cpp_switch.asp,
+TFB1013-R100,TFB1013,Selection: switch Statement (Week 5),Test 1; Quiz 1,Intermediate,W3Schools: Switch Code Challenge,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,https://www.w3schools.com/cpp/cpp_challenges_switch.asp,
+TFB1013-R101,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Beginner,W3Schools: C++ While Loop,Lecture Notes,Basic,Foundational Learning,Concept Review,https://www.w3schools.com/cpp/cpp_while_loop.asp,
+TFB1013-R102,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Beginner,W3Schools: C++ Do/While Loop,Lecture Notes,Basic,Foundational Learning,Concept Review,https://www.w3schools.com/cpp/cpp_do_while_loop.asp,
+TFB1013-R103,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Beginner,W3Schools: C++ For Loop,Lecture Notes,Basic,Foundational Learning,Concept Review,https://www.w3schools.com/cpp/cpp_for_loop.asp,
+TFB1013-R104,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Intermediate,W3Schools: C++ Nested Loops,Lecture Notes,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.w3schools.com/cpp/cpp_for_loop_nested.asp,
+TFB1013-R105,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Intermediate,W3Schools: While Loop Code Challenge,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,https://www.w3schools.com/cpp/cpp_challenges_while_loop.asp,
+TFB1013-R106,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Intermediate,W3Schools: For Loop Code Challenge,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,https://www.w3schools.com/cpp/cpp_challenges_for_loop.asp,
+TFB1013-R107,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Advanced,W3Schools: Real-Life Examples of While Loops,Case Study,Advanced,Extension and Challenging Application,Case Study,https://www.w3schools.com/cpp/cpp_while_loop_reallife.asp,
+TFB1013-R108,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Advanced,W3Schools: Real-Life Examples of For Loops,Case Study,Advanced,Extension and Challenging Application,Case Study,https://www.w3schools.com/cpp/cpp_for_loop_reallife.asp,
+TFB1013-R109,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Beginner,W3Schools: C++ Arrays,Lecture Notes,Basic,Foundational Learning,Concept Review,https://www.w3schools.com/cpp/cpp_arrays.asp,
+TFB1013-R110,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Beginner,W3Schools: C++ Arrays and Loops,Lecture Notes,Basic,Foundational Learning,Guided Practice,https://www.w3schools.com/cpp/cpp_arrays_loop.asp,
+TFB1013-R111,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Intermediate,W3Schools: C++ Multidimensional Arrays,Lecture Notes,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.w3schools.com/cpp/cpp_arrays_multi.asp,
+TFB1013-R112,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Intermediate,W3Schools: Arrays Code Challenge,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,https://www.w3schools.com/cpp/cpp_challenges_arrays.asp,
+TFB1013-R113,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Advanced,W3Schools: Real-Life Example of Arrays,Case Study,Advanced,Extension and Challenging Application,Case Study,https://www.w3schools.com/cpp/cpp_arrays_reallife.asp,
+TFB1013-R114,TFB1013,Structures (Week 8),Test 2; Quiz 2,Beginner,W3Schools: C++ Structures,Lecture Notes,Basic,Foundational Learning,Concept Review,https://www.w3schools.com/cpp/cpp_structs.asp,
+TFB1013-R115,TFB1013,Structures (Week 8),Test 2; Quiz 2,Intermediate,W3Schools: Passing Structures to Functions,Lecture Notes,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.w3schools.com/cpp/cpp_function_structures.asp,
+TFB1013-R116,TFB1013,Structures (Week 8),Test 2; Quiz 2,Intermediate,W3Schools: C++ Exercises,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,https://www.w3schools.com/cpp/cpp_exercises.asp,
+TFB1013-R117,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Beginner,W3Schools: C++ Functions,Lecture Notes,Basic,Foundational Learning,Concept Review,https://www.w3schools.com/cpp/cpp_functions.asp,
+TFB1013-R118,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Beginner,W3Schools: C++ Function Parameters and Arguments,Lecture Notes,Basic,Foundational Learning,Guided Practice,https://www.w3schools.com/cpp/cpp_function_param.asp,
+TFB1013-R119,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Beginner,W3Schools: C++ Return Values,Lecture Notes,Basic,Foundational Learning,Concept Review,https://www.w3schools.com/cpp/cpp_function_return.asp,
+TFB1013-R120,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Intermediate,W3Schools: C++ <cmath> Reference (predefined math functions),Lecture Notes,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.w3schools.com/cpp/cpp_ref_math.asp,
+TFB1013-R121,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Advanced,W3Schools: Real-Life Example of Functions,Case Study,Advanced,Extension and Challenging Application,Case Study,https://www.w3schools.com/cpp/cpp_function_reallife.asp,
+TFB1013-R122,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Test 2; Quiz 2,Beginner,W3Schools: C++ Multiple Parameters,Lecture Notes,Basic,Foundational Learning,Guided Practice,https://www.w3schools.com/cpp/cpp_function_multiple.asp,
+TFB1013-R123,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Test 2; Quiz 2,Intermediate,W3Schools: C++ Pass By Reference,Lecture Notes,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.w3schools.com/cpp/cpp_function_reference.asp,
+TFB1013-R124,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Test 2; Quiz 2,Intermediate,W3Schools: C++ Scope,Lecture Notes,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.w3schools.com/cpp/cpp_scope.asp,
+TFB1013-R125,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Test 2; Quiz 2,Intermediate,W3Schools: C++ Exercises,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,https://www.w3schools.com/cpp/cpp_exercises.asp,
+TFB1013-R126,TFB1013,File Handling (Week 11),Test 2; Quiz 2,Beginner,W3Schools: C++ Files (Create and Write to a File),Lecture Notes,Basic,Foundational Learning,Concept Review,https://www.w3schools.com/cpp/cpp_files.asp,
+TFB1013-R127,TFB1013,File Handling (Week 11),Test 2; Quiz 2,Intermediate,W3Schools: C++ <fstream> Reference,Lecture Notes,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.w3schools.com/cpp/cpp_ref_fstream.asp,
+TFB1013-R128,TFB1013,Programming and Problem Solving (Week 1),Test 1; Quiz 1,Advanced,Challenge Quiz: Programming Basics,Quiz,Advanced,Extension and Challenging Application,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R129,TFB1013,Algorithm and Program Design (Week 2),Test 1; Quiz 1,Advanced,Challenge Quiz: Algorithm Design,Quiz,Advanced,Extension and Challenging Application,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R130,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Advanced,Challenge Quiz: C++ Program Structure,Quiz,Advanced,Extension and Challenging Application,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R131,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Advanced,Challenge Quiz: if Statement,Quiz,Advanced,Extension and Challenging Application,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R132,TFB1013,Selection: switch Statement (Week 5),Test 1; Quiz 1,Advanced,Challenge Quiz: switch Statement,Quiz,Advanced,Extension and Challenging Application,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R133,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Advanced,Challenge Quiz: Loops,Quiz,Advanced,Extension and Challenging Application,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R134,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Advanced,Challenge Quiz: Arrays,Quiz,Advanced,Extension and Challenging Application,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R135,TFB1013,Structures (Week 8),Test 2; Quiz 2,Advanced,Challenge Quiz: Structures,Quiz,Advanced,Extension and Challenging Application,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R136,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Advanced,Challenge Quiz: Predefined Functions,Quiz,Advanced,Extension and Challenging Application,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R137,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Test 2; Quiz 2,Advanced,Challenge Quiz: User-Defined Functions,Quiz,Advanced,Extension and Challenging Application,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R138,TFB1013,File Handling (Week 11),Test 2; Quiz 2,Advanced,Challenge Quiz: File Handling,Quiz,Advanced,Extension and Challenging Application,Application Quiz,,Answer the questions below. Your score is shown after you submit.
+TFB1013-R139,TFB1013,Programming and Problem Solving (Week 1),Test 1; Quiz 1,Advanced,Extension Notes: Programming Basics (beyond the slides),Lecture Notes,Advanced,Extension and Challenging Application,Extension Reading,,"**Extension points**
+
+- Compiled and interpreted languages trade speed, portability and ease of debugging. Many modern languages mix both ideas.
+- Structured programming reduced the use of jumps such as goto, which made programs easier to follow and maintain.
+- Choosing a language is a design decision: match it to the problem, the platform and the team."
+TFB1013-R140,TFB1013,Algorithm and Program Design (Week 2),Test 1; Quiz 1,Advanced,Extension Notes: Algorithm Design (beyond the slides),Lecture Notes,Advanced,Extension and Challenging Application,Extension Reading,,"**Extension points**
+
+- A correct algorithm is not always an efficient one. Compare algorithms by how many steps they need as the input grows.
+- A good module does one task. If you cannot name it in a few words, split it.
+- Choose test data on purpose: normal values, boundary values and invalid values."
+TFB1013-R141,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Advanced,Extension Notes: C++ Program Structure (beyond the slides),Lecture Notes,Advanced,Extension and Challenging Application,Extension Reading,,"**Extension points**
+
+- Mixed arithmetic converts types automatically. Use an explicit cast, such as static_cast<double>(total) / count, when you need control.
+- An int has a limited range. Very large results overflow and give wrong answers without an error message.
+- Integer division and % are often used together, for example to split minutes into hours and minutes."
+TFB1013-R142,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Advanced,Extension Notes: if Statement (beyond the slides),Lecture Notes,Advanced,Extension and Challenging Application,Extension Reading,,"**Extension points**
+
+- && and || use short-circuit evaluation: the right side is skipped when the left side already decides the result.
+- Do not compare doubles with ==. Small rounding errors make equal-looking values differ. Compare within a small tolerance.
+- Test conditions at the boundaries, for example marks of 59, 60, 79 and 80."
+TFB1013-R143,TFB1013,Selection: switch Statement (Week 5),Test 1; Quiz 1,Advanced,Extension Notes: switch Statement (beyond the slides),Lecture Notes,Advanced,Extension and Challenging Application,Extension Reading,,"**Extension points**
+
+- Fall-through can be used on purpose to share one action between several cases. Add a comment so it is not mistaken for a bug.
+- switch is clearer than a long if-else chain for fixed choices, but it cannot test ranges or strings.
+- Named constants or an enum make case labels easier to read than bare numbers."
+TFB1013-R144,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Advanced,Extension Notes: Loops (beyond the slides),Lecture Notes,Advanced,Extension and Challenging Application,Extension Reading,,"**Extension points**
+
+- Off-by-one errors are the most common loop bug. Check the first and last pass by hand.
+- Counter-controlled loops repeat a known number of times. Sentinel-controlled loops stop on a special input value.
+- Nested loops multiply the work: two loops of n passes each run n x n times."
+TFB1013-R145,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Advanced,Extension Notes: Arrays (beyond the slides),Lecture Notes,Advanced,Extension and Challenging Application,Extension Reading,,"**Extension points**
+
+- When an array is passed to a function, the function does not know its size. Pass the size as another parameter.
+- C++ does not check array bounds. std::vector offers safer access and can grow.
+- Linear search checks elements one by one. Sorting first allows faster searching methods."
+TFB1013-R146,TFB1013,Structures (Week 8),Test 2; Quiz 2,Advanced,Extension Notes: Structures (beyond the slides),Lecture Notes,Advanced,Extension and Challenging Application,Extension Reading,,"**Extension points**
+
+- Pass a large struct by reference, or by const reference when it should not change, to avoid copying it.
+- An array of structs can be sorted by any member, for example by mark.
+- A class extends the struct idea by adding functions and access control."
+TFB1013-R147,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Advanced,Extension Notes: Predefined Functions (beyond the slides),Lecture Notes,Advanced,Extension and Challenging Application,Extension Reading,,"**Extension points**
+
+- Function overloading lets several functions share one name if their parameters differ.
+- Default arguments let a caller leave out trailing parameters.
+- A function can call itself. This is recursion and needs a stopping condition."
+TFB1013-R148,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Test 2; Quiz 2,Advanced,Extension Notes: User-Defined Functions (beyond the slides),Lecture Notes,Advanced,Extension and Challenging Application,Extension Reading,,"**Extension points**
+
+- Use const reference for large parameters that the function only reads.
+- Scope is where a name is visible. Lifetime is how long the value exists. A static local variable keeps its value between calls.
+- Recursion solves a problem by solving a smaller copy of it. Compare it with a loop for the same task."
+TFB1013-R149,TFB1013,File Handling (Week 11),Test 2; Quiz 2,Advanced,Extension Notes: File Handling (beyond the slides),Lecture Notes,Advanced,Extension and Challenging Application,Extension Reading,,"**Extension points**
+
+- Always check that a file opened. Decide what the program does when it fails.
+- To read a line of values, use getline and then split it, for example with a stringstream.
+- Binary files can be read and written in blocks, and seekg lets you jump to a record."
+TFB1013-R150,TFB1013,Programming and Problem Solving (Week 1),Test 1; Quiz 1,Beginner,YouTube: Compiler vs Interpreter,Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=6rvTlvbTpHE,
+TFB1013-R151,TFB1013,Programming and Problem Solving (Week 1),Test 1; Quiz 1,Intermediate,YouTube: Interpreter vs Compiler - What's the Difference?,Video,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.youtube.com/watch?v=ZWM-I2rRfP8,
+TFB1013-R152,TFB1013,Algorithm and Program Design (Week 2),Test 1; Quiz 1,Beginner,YouTube: Pseudocode and Flowchart (Programming for Beginners series),Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=AlEBMhxreo0,
+TFB1013-R153,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Beginner,YouTube: C++ Variables and Basic Data Types,Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=4psGUiKacPQ,
+TFB1013-R154,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Beginner,YouTube: C++ cin and cout Statements Explained for Beginners,Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=MMyL2FAuDOs,
+TFB1013-R155,TFB1013,C++ Program Structure and Sequential Control (Week 3),Test 1; Quiz 1,Intermediate,"YouTube: Variables, Input and Output with cin and cout (practice programs)",Video,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.youtube.com/watch?v=dK75363BMUU,
+TFB1013-R156,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Beginner,"YouTube: C++ Tutorial for Beginners Ep#7 - if, else, else if (SavvyNik)",Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=5nzWBzfHMP8,
+TFB1013-R157,TFB1013,Selection: if Statement (Week 4),Test 1; Quiz 1,Intermediate,"YouTube: C++ Conditional Statements - If, Else If, Else Explained for Beginners",Video,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.youtube.com/watch?v=CRMKZGGztp4,
+TFB1013-R158,TFB1013,Selection: switch Statement (Week 5),Test 1; Quiz 1,Beginner,YouTube: C++ Tutorial for Beginners Ep#9 - Switch Case (SavvyNik),Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=VtRsNyWTwfw,
+TFB1013-R159,TFB1013,Selection: switch Statement (Week 5),Test 1; Quiz 1,Intermediate,YouTube: C++ Switch Statement Tutorial - Build a Simple Calculator,Video,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.youtube.com/watch?v=tJfufRaj504,
+TFB1013-R160,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Beginner,"YouTube: C++ Tutorial - Loops in C++ (For Loop, While Loop, Do While)",Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=jNl5gJ_xSNQ,
+TFB1013-R161,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Beginner,YouTube: C++ Tutorial for Beginners Ep#11 - For Loops (SavvyNik),Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=m0fHnK1iReI,
+TFB1013-R162,TFB1013,Repetition: Loops (Week 6),Test 1; Quiz 1,Intermediate,YouTube: For Loops in C++ (counting forward and backwards),Video,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.youtube.com/watch?v=dZDpUwtPLWI,
+TFB1013-R163,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Beginner,"YouTube: C++ Arrays Tutorial for Beginners - Declaration, Accessing and Operations",Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=1wUOR-jMOM0,
+TFB1013-R164,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Beginner,YouTube: Learn C++ With Me #9 - Arrays,Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=1FVBeLD_FdE,
+TFB1013-R165,TFB1013,Arrays (Week 7),Test 2; Quiz 2,Intermediate,YouTube: C++ Arrays for Beginners [Part 11] - Passing Arrays to Functions,Video,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.youtube.com/watch?v=GvJv8vS7S5Q,
+TFB1013-R166,TFB1013,Structures (Week 8),Test 2; Quiz 2,Beginner,YouTube: C++ Tutorial for Beginners 19 - C++ Structures,Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=QBXoWOc7T_Q,
+TFB1013-R167,TFB1013,Structures (Week 8),Test 2; Quiz 2,Beginner,YouTube: STRUCTS in C++ explained,Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=ObUUe9ujYoY,
+TFB1013-R168,TFB1013,Structures (Week 8),Test 2; Quiz 2,Intermediate,YouTube: Arrays of Structures - C++ Structs Tutorial #4,Video,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.youtube.com/watch?v=Nfj2fntwS80,
+TFB1013-R169,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Beginner,YouTube: C++ Functions Tutorial for Beginners - Void vs Value-Returning Functions,Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=rF61ZJjgiTQ,
+TFB1013-R170,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Beginner,"YouTube: C++ Tutorial - Function Parameters, Arguments and Return Types",Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=HOT6fuirVuw,
+TFB1013-R171,TFB1013,Functions Part 1: Predefined Functions and Prototypes (Week 9a),Test 2; Quiz 2,Intermediate,YouTube: Returning from Functions - C++ Functions for Beginners [Part 5],Video,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.youtube.com/watch?v=5WT_ihLjjFc,
+TFB1013-R172,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Test 2; Quiz 2,Beginner,YouTube: C++ pass by VALUE vs pass by REFERENCE,Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=ao0I1ViVV6U,
+TFB1013-R173,TFB1013,Functions Part 2: User-Defined Functions and Parameters (Week 9b),Test 2; Quiz 2,Intermediate,YouTube: Pass by Reference vs Pass by Value - C++ Functions for Beginners [Part 13],Video,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.youtube.com/watch?v=EQVY3BY8ZfU,
+TFB1013-R174,TFB1013,File Handling (Week 11),Test 2; Quiz 2,Beginner,YouTube: C++ File Handling Tutorial - Read and Write Files with fstream,Video,Basic,Foundational Learning,Concept Review,https://www.youtube.com/watch?v=hZXoOv39vRU,
+TFB1013-R175,TFB1013,File Handling (Week 11),Test 2; Quiz 2,Intermediate,YouTube: Reading and Writing Files - C++ Tutorial #3,Video,Intermediate,Reinforcement and Guided Practice,Concept Reinforcement,https://www.youtube.com/watch?v=Jydu1mT2YPw,
+TFB2063-R001,TFB2063,Introduction to Data Science (Week 1),Test 1; Quiz 1,Beginner,Introduction to Data Science: Key Points (Week 01 slides),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- Data science is an interdisciplinary field that uses scientific methods, processes and algorithms to get knowledge and insight from structured and unstructured data.
+- A data scientist collects, analyses and interprets large amounts of data, using skills from mathematics, statistics and computing.
+- The life cycle follows a methodology such as CRISP-DM: business understanding, data collection, data processing and cleaning, modelling, evaluation and deployment.
+- Business understanding comes first: define the problem, the questions and an objective that supports the goal.
+- The analytic approach depends on the question: a predictive model for the probability of an action, a descriptive model for relationships, and a classification model for a yes/no answer.
+
+*Source: Week 01 slides*"
+TFB2063-R002,TFB2063,Introduction to Data Science (Week 1),Test 1; Quiz 1,Beginner,Introduction to Data Science: Worked Example,Worked Example,Basic,Foundational Learning,Guided Practice,,"**Choosing an analytic approach**
+
+- ""Will this customer cancel next month?"" needs a yes/no answer, so use a **classification** model.
+- ""Which products are often bought together?"" asks about relationships, so use a **descriptive** model.
+- ""How many units will we sell next week?"" asks for a number, so use a **predictive** model.
+
+*Source: Week 01 slides*"
+TFB2063-R003,TFB2063,Introduction to Data Science (Week 1),Test 1; Quiz 1,Intermediate,Introduction to Data Science: Practice Exercise,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+For each question, choose a descriptive, predictive or classification approach and give one reason: (a) Which students are likely to fail the course? (b) What is the relationship between study hours and marks? (c) What will the average mark be next semester?
+
+**Answer key:** (a) classification (fail or pass), (b) descriptive (relationship), (c) predictive (a number)."
+TFB2063-R004,TFB2063,Introduction to Data Science (Week 1),Test 1; Quiz 1,Advanced,Introduction to Data Science: Case Study,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+A lecturer gives an assignment with unclear requirements, and students submit very different work. The lecturer wants to improve this using data.
+
+**Questions**
+1. Write the business problem and the objective.
+2. Define one success criterion.
+3. Which analytic approach would you start with, and why?
+
+**Discussion points:** the problem is unclear communication of requirements, the objective is to receive the intended work, and a success criterion could be the share of submissions that meet the marking criteria."
+TFB2063-R005,TFB2063,Data Exploration (Week 2),Test 1; Quiz 1,Beginner,Data Exploration: Key Points (Week 02 slides),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- Data exploration covers understanding the data, collecting it, cleaning and preparing it, analysing it and visualizing the results.
+- Primary data is collected for your own question (questionnaires, observation, interviews, experiments). Secondary data was collected by someone else (published data, public records, repositories such as Kaggle).
+- Improper data collection makes it impossible to answer the research question, repeat the study or trust the findings.
+- Quantitative data is numeric. Qualitative data describes qualities and often appears as text or categories.
+- Data cleaning has five steps: remove duplicate or irrelevant observations, fix structural errors, filter unwanted outliers, handle missing data and validate.
+
+*Source: Week 02 slides*"
+TFB2063-R006,TFB2063,Data Exploration (Week 2),Test 1; Quiz 1,Beginner,Data Exploration: Worked Example,Worked Example,Basic,Foundational Learning,Guided Practice,,"**Handling missing values**
+
+Heights: 160, 175, missing, 173.
+- The mean of the known values is (160 + 175 + 173) / 3 = 169.3, so a mean fill gives 169.3.
+- The values ""N/A"" and ""Not Applicable"" are a structural error: treat them as the same category.
+
+*Source: Week 02 slides*"
+TFB2063-R007,TFB2063,Data Exploration (Week 2),Test 1; Quiz 1,Intermediate,Data Exploration: Practice Exercise,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Say whether each data item is primary or secondary, and quantitative or qualitative: (a) the number of students in each hostel taken from the university website, (b) answers from interviews about why students skip lectures.
+
+**Answer key:** (a) secondary and quantitative, (b) primary and qualitative."
+TFB2063-R008,TFB2063,Data Exploration (Week 2),Test 1; Quiz 1,Advanced,Data Exploration: Case Study,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+Two student record files are combined. The result has repeated students, the state written as ""Perak"" and ""PERAK"", some missing ages, and one age of 250.
+
+**Questions**
+1. Apply the five cleaning steps in order to this data.
+2. How would you treat the missing ages and the age of 250?
+
+**Discussion points:** remove duplicates, make the capitalisation consistent, treat 250 as an outlier or error, fill missing ages with a justified method (such as the median) and then validate the result."
+TFB2063-R009,TFB2063,Machine Learning in Data Science (Week 3),Test 1; Quiz 1,Beginner,Machine Learning in Data Science: Key Points (Week 03 slides),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- Machine learning builds a model from training data to make predictions or decisions without being explicitly programmed for each case.
+- Key terms: a feature is a measurable property of the data, a target (label) is the value to predict, training builds the model from data, and a prediction is the output for new input.
+- A learning system has a decision process, an error function that judges predictions, and an optimisation process that adjusts the model to reduce error.
+- The steps are: gather data, prepare data, choose a model, train, evaluate, tune hyperparameters and predict.
+- Methods: supervised learning (labelled data, classification and regression), unsupervised learning (unlabelled data, clustering) and reinforcement learning (rewards and penalties).
+
+*Source: Week 03 slides*"
+TFB2063-R010,TFB2063,Machine Learning in Data Science (Week 3),Test 1; Quiz 1,Beginner,Machine Learning in Data Science: Worked Example,Worked Example,Basic,Foundational Learning,Guided Practice,,"**Spam filter as supervised classification**
+
+- Features: number of links, number of capital letters.
+- Target (label): spam or not spam.
+- Training: the algorithm learns from emails that already have labels.
+- Prediction: the model labels a new email.
+
+*Source: Week 03 slides*"
+TFB2063-R011,TFB2063,Machine Learning in Data Science (Week 3),Test 1; Quiz 1,Intermediate,Machine Learning in Data Science: Practice Exercise,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Name the type of learning for each: (a) group customers by buying behaviour with no labels, (b) predict a house price, (c) a robot learns a game from rewards, (d) detect fake news using labelled examples.
+
+**Answer key:** (a) unsupervised clustering, (b) supervised regression, (c) reinforcement learning, (d) supervised classification."
+TFB2063-R012,TFB2063,Machine Learning in Data Science (Week 3),Test 1; Quiz 1,Advanced,Machine Learning in Data Science: Case Study,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+A university wants to find students who may need extra help, using their test marks from earlier in the semester.
+
+**Questions**
+1. What are the features and the target?
+2. Is this classification, regression or clustering?
+3. How would you check that the model works before using it?
+
+**Discussion points:** features are the early marks, the target is the later outcome or level, a classification model fits if the outcome is a category, and evaluation uses data not seen in training."
+TFB2063-R013,TFB2063,Data Management and Manipulation with R (Week 4),Test 1; Quiz 1,Beginner,Data Management and Manipulation with R: Key Points (Week 04 slides),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- A dataframe is a two-dimensional table with column and row names. It is one of the main data structures in data science.
+- Create one with data.frame(). Access columns and rows with square brackets, for example df[1] for the first column and df[1, ] for the first row.
+- df[""gender""] returns a dataframe, while df$gender returns a vector.
+- Conditions select rows, for example df[df$age > 35, ]. Use rbind() to add rows and merge() to combine dataframes.
+- Datasets are imported and exported with functions such as read.csv() and write.csv(), and missing values must be handled.
+
+*Source: Week 04 slides*"
+TFB2063-R014,TFB2063,Data Management and Manipulation with R (Week 4),Test 1; Quiz 1,Beginner,Data Management and Manipulation with R: Worked Example,Worked Example,Basic,Foundational Learning,Guided Practice,,"**Selecting rows with conditions**
+
+```r
+df <- data.frame(names = c(""Carrol"", ""Mike"", ""John""),
+                 gender = c(""Female"", ""Male"", ""Male""),
+                 height = c(160, 175, 173),
+                 weight = c(49, 89, 77),
+                 age = c(35, 36, 41))
+df[df$age > 35, ]                       # Mike and John
+df[df$height > 170 & df$weight > 80, ]  # Mike only
+```
+
+*Source: Week 04 slides*"
+TFB2063-R015,TFB2063,Data Management and Manipulation with R (Week 4),Test 1; Quiz 1,Intermediate,Data Management and Manipulation with R: Practice Exercise,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Using the dataframe above, write R code to (a) get the gender column as a vector, (b) select people younger than 40 and taller than 170.
+
+**Answer key:** (a) df$gender, (b) df[df$age < 40 & df$height > 170, ] which returns Mike."
+TFB2063-R016,TFB2063,Data Management and Manipulation with R (Week 4),Test 1; Quiz 1,Advanced,Data Management and Manipulation with R: Case Study,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+A lab marks file is imported, but some quiz marks are missing and the file has no total column.
+
+**Questions**
+1. Write the steps in R to import the file, find the missing values, fill them and add a total column.
+2. Which function exports the cleaned data?
+
+**Discussion points:** read.csv(), colSums(is.na(df)), replace with a justified value such as the mean using mean(x, na.rm = TRUE), a new column such as df$total, and write.csv()."
+TFB2063-R017,TFB2063,Dataframe Manipulations and Descriptive Analytics (Week 5),Test 1; Quiz 1,Beginner,Dataframe Manipulations and Descriptive Analytics: Key Points (Week 05 slides),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- The dplyr library provides filter() for rows, select() for columns, mutate() for new variables and arrange() for sorting (use desc() for descending order).
+- The pipe operator %>% passes the output of one command into the next, so commands can be chained.
+- Descriptive analytics answers ""what happened?"" using summaries, tables and charts.
+- Descriptive statistics include measures of central tendency (mean, median, mode) and dispersion (range, variance, standard deviation).
+- Useful R functions: head(), tail(), str(), min(), max(), range(), mean(), median(), sd() and var(). Outliers need to be identified and handled.
+
+*Source: Week 05 slides*"
+TFB2063-R018,TFB2063,Dataframe Manipulations and Descriptive Analytics (Week 5),Test 1; Quiz 1,Beginner,Dataframe Manipulations and Descriptive Analytics: Worked Example,Worked Example,Basic,Foundational Learning,Guided Practice,,"**Chaining dplyr commands**
+
+```r
+library(dplyr)
+mydata <- marks %>%
+  filter(Final_Exam > 20) %>%
+  mutate(Total_Mark = Coursework + Final_Exam) %>%
+  arrange(desc(Total_Mark))
+```
+This keeps students with a final exam mark above 20, adds a total mark and sorts from highest to lowest.
+
+*Source: Week 05 slides*"
+TFB2063-R019,TFB2063,Dataframe Manipulations and Descriptive Analytics (Week 5),Test 1; Quiz 1,Intermediate,Dataframe Manipulations and Descriptive Analytics: Practice Exercise,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+For the marks 60, 70, 80, 90, 100, find the mean, median, range, variance and standard deviation.
+
+**Answer key:** mean 80, median 80, range 60 to 100 (spread of 40), sample variance 250 and standard deviation about 15.81."
+TFB2063-R020,TFB2063,Dataframe Manipulations and Descriptive Analytics (Week 5),Test 1; Quiz 1,Advanced,Dataframe Manipulations and Descriptive Analytics: Case Study,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+A dataset has Student_ID, Coursework and Final_Exam. You are asked to report on students who failed.
+
+**Questions**
+1. Write dplyr code to list students with Final_Exam below 20.
+2. Add a Total_Mark column and sort it.
+3. How would you check for outliers?
+
+**Discussion points:** filter(Final_Exam < 20), mutate(Total_Mark = Coursework + Final_Exam), arrange(), and check outliers with min(), max() or a plot before deciding to keep or remove them."
+TFB2063-R021,TFB2063,"Imbalance Data, Scaling and Visualization (Week 6)",Test 2; Quiz 2,Beginner,"Imbalance Data, Scaling and Visualization: Key Points (Week 06 slides)",Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- Imbalanced data has an uneven class distribution, for example 95 ""Yes"" and 5 ""No"". Models become biased toward the majority class.
+- A small imbalance (60/40) is usually fine. A large one (90/10 or more) needs treatment.
+- Oversampling replicates minority rows and suits small datasets. Undersampling removes majority rows and suits very large datasets. The ROSE package can do both.
+- Scaling puts values on a comparable range. Normalization maps values to 0 to 1 using (x - min) / (max - min). Standardization gives mean 0 and standard deviation 1.
+- Visualization such as a scatter plot (plot(x, y)) shows the relationship between two variables.
+
+*Source: Week 06 slides*"
+TFB2063-R022,TFB2063,"Imbalance Data, Scaling and Visualization (Week 6)",Test 2; Quiz 2,Beginner,"Imbalance Data, Scaling and Visualization: Worked Example",Worked Example,Basic,Foundational Learning,Guided Practice,,"**Normalization by hand**
+
+Values 244, 753, 596, 645, 874, 141, 639, 465, 999, 654 have a minimum of 141 and a maximum of 999.
+For 244: (244 - 141) / (999 - 141) = 103 / 858 = 0.12.
+
+*Source: Week 06 slides*"
+TFB2063-R023,TFB2063,"Imbalance Data, Scaling and Visualization (Week 6)",Test 2; Quiz 2,Intermediate,"Imbalance Data, Scaling and Visualization: Practice Exercise",Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+A training set has 980 negative and 20 positive cases. (a) What are the proportions? (b) What happens with oversampling to N = 1960? (c) What happens with undersampling to N = 40? (d) Normalize 874 using the values above.
+
+**Answer key:** (a) 98% and 2%, (b) 980 of each class (50/50), (c) 20 of each class (50/50), (d) (874 - 141) / 858 = 0.85."
+TFB2063-R024,TFB2063,"Imbalance Data, Scaling and Visualization (Week 6)",Test 2; Quiz 2,Advanced,"Imbalance Data, Scaling and Visualization: Case Study",Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+A fraud model reports 99% accuracy, but only 1% of transactions are fraud and the model predicts ""not fraud"" every time.
+
+**Questions**
+1. Why is 99% accuracy misleading here?
+2. Suggest two ways to handle the imbalance.
+3. Which measures would you check besides accuracy?
+
+**Discussion points:** the model finds none of the fraud, so use oversampling or undersampling, and check recall and precision."
+TFB2063-R025,TFB2063,Predictive Modelling: Linear Regression (Week 8),Test 2; Quiz 2,Beginner,Predictive Modelling: Linear Regression: Key Points (Week 8 slides),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- Data is split into a training set (about 70 to 80 percent) used to build the model and a test set (20 to 30 percent) used to check it.
+- Simple linear regression estimates the relationship between one independent variable x and a dependent variable y with the line y = b + a x, where a is the slope and b is the intercept.
+- In R, lm(y ~ x) fits the model and predict() gives predictions for new values.
+- Multiple linear regression uses more than one independent variable.
+- Error measures such as the mean absolute percentage error (MAPE) show how far predictions are from actual values.
+
+*Source: Week 8 slides*"
+TFB2063-R026,TFB2063,Predictive Modelling: Linear Regression (Week 8),Test 2; Quiz 2,Beginner,Predictive Modelling: Linear Regression: Worked Example,Worked Example,Basic,Foundational Learning,Guided Practice,,"**Predicting weight from height**
+
+The fitted model has intercept -38.4551 and slope 0.6746.
+For a height of 170: y = -38.4551 + 0.6746 x 170 = 76.23.
+
+*Source: Week 8 slides*"
+TFB2063-R027,TFB2063,Predictive Modelling: Linear Regression (Week 8),Test 2; Quiz 2,Intermediate,Predictive Modelling: Linear Regression: Practice Exercise,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Use the same model to predict the weight for heights of 150 and 180.
+
+**Answer key:** 150 gives -38.4551 + 101.19 = 62.73. 180 gives -38.4551 + 121.43 = 82.97."
+TFB2063-R028,TFB2063,Predictive Modelling: Linear Regression (Week 8),Test 2; Quiz 2,Advanced,Predictive Modelling: Linear Regression: Case Study,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+A lecturer wants to predict the final exam mark from coursework and quiz marks using multiple linear regression.
+
+**Questions**
+1. Which variables are dependent and independent?
+2. How would you split the data and test the model?
+3. What is the risk of predicting for a student far outside the range of the training data?
+
+**Discussion points:** final exam is dependent, coursework and quiz are independent, use a training and test split with an error measure, and be careful when extrapolating beyond the data."
+TFB2063-R029,TFB2063,Model Evaluation and Feature Selection (Week 9),Test 2; Quiz 2,Beginner,Model Evaluation and Feature Selection: Key Points (Week 09 slides),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- The correlation coefficient measures the strength of a linear relationship and ranges from -1 to +1. It can compare actual and predicted values.
+- A confusion matrix compares actual and predicted classes for a classifier, with true positives, true negatives, false positives and false negatives.
+- Accuracy = (TP + TN) / all. Precision = TP / (TP + FP). Recall = TP / (TP + FN). The F1 score balances precision and recall.
+- Feature selection keeps informative features, which improves performance, reduces computation and makes the model easier to understand. A correlation heatmap helps to choose features.
+- Data quality matters because poor data gives unreliable models.
+
+*Source: Week 09 slides*"
+TFB2063-R030,TFB2063,Model Evaluation and Feature Selection (Week 9),Test 2; Quiz 2,Beginner,Model Evaluation and Feature Selection: Worked Example,Worked Example,Basic,Foundational Learning,Guided Practice,,"**Metrics from a confusion matrix**
+
+TP = 45, FN = 15, FP = 5, TN = 135 (200 emails).
+- Accuracy = (45 + 135) / 200 = 0.90
+- Precision = 45 / 50 = 0.90
+- Recall = 45 / 60 = 0.75
+- F1 = 2 x 0.90 x 0.75 / (0.90 + 0.75) = 0.82
+
+*Source: Week 09 slides*"
+TFB2063-R031,TFB2063,Model Evaluation and Feature Selection (Week 9),Test 2; Quiz 2,Intermediate,Model Evaluation and Feature Selection: Practice Exercise,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+A spam filter has TP = 40, FP = 10, FN = 20, TN = 130. Calculate accuracy, precision, recall and F1.
+
+**Answer key:** accuracy 0.85, precision 0.80, recall 0.67, F1 0.73."
+TFB2063-R032,TFB2063,Model Evaluation and Feature Selection (Week 9),Test 2; Quiz 2,Advanced,Model Evaluation and Feature Selection: Case Study,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+A model has 95% accuracy on a dataset where only 5% of cases are positive. A manager says it is excellent.
+
+**Questions**
+1. Why might the manager be wrong?
+2. Which metric would you check next?
+3. How can a correlation heatmap help before modelling?
+
+**Discussion points:** a model that always predicts negative also scores 95%, so check recall and F1, and use correlations to keep features related to the target and remove redundant ones."
+TFB2063-R033,TFB2063,Decision Tree and K-means (Week 10),Test 2; Quiz 2,Beginner,Decision Tree and K-means: Key Points (Week 10 slides),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- A decision tree has inner nodes that test an attribute, edges that are the outcomes of the test, and leaves that give a class. It is built top-down from training data.
+- CART (classification and regression trees) predicts a category with a classification tree and a number with a regression tree.
+- Each path from the root to a leaf is an if/then rule, and a new record is classified by following the tests down to a leaf.
+- Splits aim to make nodes purer, for example by reducing misclassification.
+- K-means is unsupervised clustering: choose k, assign each point to the nearest centroid, recompute the centroids and repeat until the clusters stop changing.
+
+*Source: Week 10 slides*"
+TFB2063-R034,TFB2063,Decision Tree and K-means (Week 10),Test 2; Quiz 2,Beginner,Decision Tree and K-means: Worked Example,Worked Example,Basic,Foundational Learning,Guided Practice,,"**Following a tree**
+
+Rules for ""play golf"":
+1. Sunny and humidity up to 75%: play.
+2. Sunny and humidity above 75%: do not play.
+3. Overcast: play.
+4. Rainy and not windy: play.
+5. Rainy and windy: do not play.
+
+A record with rain, humidity 65 and windy = true follows rule 5, so the answer is do not play.
+
+*Source: Week 10 slides*"
+TFB2063-R035,TFB2063,Decision Tree and K-means (Week 10),Test 2; Quiz 2,Intermediate,Decision Tree and K-means: Practice Exercise,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+(a) Classify sunny, humidity 80, not windy. (b) Classify overcast, humidity 90, windy. (c) For points 1, 2, 10, 11 with k = 2 and starting centroids 1 and 10, find the clusters and new centroids.
+
+**Answer key:** (a) do not play, (b) play, (c) clusters {1, 2} and {10, 11}, new centroids 1.5 and 10.5."
+TFB2063-R036,TFB2063,Decision Tree and K-means (Week 10),Test 2; Quiz 2,Advanced,Decision Tree and K-means: Case Study,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+A company wants (1) to predict whether a customer will cancel and (2) to group customers by behaviour with no labels.
+
+**Questions**
+1. Which task suits a decision tree and which suits k-means?
+2. Why does scaling matter for k-means?
+3. How would you choose k?
+
+**Discussion points:** the tree fits the yes/no cancel prediction and k-means fits grouping, k-means uses distances so unscaled features dominate, and k can be chosen by testing several values and checking how well the clusters separate."
+TFB2033-R001,TFB2033,Introduction to HCI and Interaction Design (Week 1),Test 1; Quiz 1,Beginner,Introduction to HCI and Interaction Design: Key Points (Introduction slides (Week 1)),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- Human-computer interaction (HCI) is the design, evaluation and implementation of interactions between people and computing systems.
+- Interaction design means designing interactive products to support the way people communicate and interact in their everyday and working lives.
+- Most users do not see the technical features of a product. They judge it by its design, meaning both what it does and how it looks.
+- Good design makes a product easy and pleasant to use, and poor design leads to errors and frustration.
+- The course project asks you to design and evaluate an interactive product, with the focus on interaction design and evaluation.
+
+*Source: Introduction slides (Week 1)*"
+TFB2033-R002,TFB2033,Introduction to HCI and Interaction Design (Week 1),Test 1; Quiz 1,Beginner,Introduction to HCI and Interaction Design: Worked Example,Worked Example,Basic,Foundational Learning,Guided Practice,,"**Good and poor design**
+
+Two ATMs do the same job. One uses clear labels and asks for confirmation before cash is taken. The other uses codes and gives no feedback.
+The first is easier to learn and prevents mistakes, so it gives a better user experience even though the technical function is the same.
+
+*Source: Introduction slides (Week 1)*"
+TFB2033-R003,TFB2033,Introduction to HCI and Interaction Design (Week 1),Test 1; Quiz 1,Intermediate,Introduction to HCI and Interaction Design: Practice Exercise,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Pick an everyday product (a phone app, a kettle or a ticket machine). List two good and two poor design features, and say how each affects the user.
+
+**Answer key (sample):** good: a clear button label helps learning, an undo option prevents errors. Poor: hidden menus cause frustration, no feedback after tapping causes confusion."
+TFB2033-R004,TFB2033,Introduction to HCI and Interaction Design (Week 1),Test 1; Quiz 1,Advanced,Introduction to HCI and Interaction Design: Case Study,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+A university portal redesign is planned because students say they cannot find their results.
+
+**Questions**
+1. Who are the users and what are their goals?
+2. Which user experience goals matter most?
+3. How would you know the redesign worked?
+
+**Discussion points:** users are students and lecturers, goals include finding results quickly, and success can be shown by faster task times and fewer complaints."
+TFB2033-R005,TFB2033,Understanding and Conceptualizing Interaction (Week 2),Test 1; Quiz 1,Beginner,Understanding and Conceptualizing Interaction: Key Points (Conceptualize slides (Week 2)),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- Usability goals: effective to use, efficient to use, safe to use, good utility, easy to learn and easy to remember how to use.
+- User experience goals describe how the experience feels. Desirable aspects include satisfying, enjoyable and motivating. Undesirable aspects include boring, frustrating and annoying.
+- The problem space is about what you want to create, your assumptions and the problems with existing products.
+- The design space is about moving from the problem to a conceptual model and the methods to build it.
+- Ask: are there problems with the existing system, why, and how will your design support and change what people do?
+
+*Source: Conceptualize slides (Week 2)*"
+TFB2033-R006,TFB2033,Understanding and Conceptualizing Interaction (Week 2),Test 1; Quiz 1,Beginner,Understanding and Conceptualizing Interaction: Worked Example,Worked Example,Basic,Foundational Learning,Guided Practice,,"**Problem space for navigation**
+
+Idea: give drivers better navigation and traffic information.
+- Possible advantage of an augmented reality display: information appears inside the car.
+- Possible problem: safety, because it can distract the driver.
+This shows the need to question assumptions before building.
+
+*Source: Conceptualize slides (Week 2)*"
+TFB2033-R007,TFB2033,Understanding and Conceptualizing Interaction (Week 2),Test 1; Quiz 1,Intermediate,Understanding and Conceptualizing Interaction: Practice Exercise,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+For an online learning app, list three usability goals and three user experience goals, with a short reason for each, and name one undesirable aspect to avoid.
+
+**Answer key (sample):** easy to learn, efficient, safe (no data loss); motivating, enjoyable, supporting creativity. Avoid feeling frustrating or patronizing."
+TFB2033-R008,TFB2033,Understanding and Conceptualizing Interaction (Week 2),Test 1; Quiz 1,Advanced,Understanding and Conceptualizing Interaction: Case Study,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+A team proposes an augmented reality windscreen display for navigation.
+
+**Questions**
+1. State the assumptions the team makes.
+2. What problems with existing navigation does it address?
+3. Which risk could outweigh the benefits?
+
+**Discussion points:** assumes drivers benefit from information in view, addresses looking away from the road, but distraction and safety could outweigh the benefit."
+TFB2033-R009,TFB2033,Understanding Users: Cognition (Week 3),Test 1; Quiz 1,Beginner,Understanding Users: Cognition: Key Points (Understanding users slides (Week 3)),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- Cognition is the process of gaining knowledge. Experiential cognition is effortless, such as driving. Reflective cognition involves thinking and decision-making, such as designing.
+- Core cognitive aspects: attention, perception and recognition, memory, learning, reading, speaking and listening, and problem-solving, planning, reasoning and decision-making.
+- Attention is selecting what to concentrate on. People find information faster when their goals are clear.
+- Design implication for attention: make important information salient (for example with colour, size or motion) and avoid overloading the screen.
+- A mental model is a person's understanding of how something works, and designs should match it.
+
+*Source: Understanding users slides (Week 3)*"
+TFB2033-R010,TFB2033,Understanding Users: Cognition (Week 3),Test 1; Quiz 1,Beginner,Understanding Users: Cognition: Worked Example,Worked Example,Basic,Foundational Learning,Guided Practice,,"**Attention in a menu**
+
+If you know you want to order a burger, you scan for it quickly. If you are not sure, you browse the whole menu.
+A design should support both: make key items easy to find, and let browsing be easy too.
+
+*Source: Understanding users slides (Week 3)*"
+TFB2033-R011,TFB2033,Understanding Users: Cognition (Week 3),Test 1; Quiz 1,Intermediate,Understanding Users: Cognition: Practice Exercise,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Give one design implication for each: (a) attention, (b) memory, (c) perception.
+
+**Answer key (sample):** (a) highlight the key alert and avoid pop-ups, (b) use menus so users recognise options instead of recalling commands, (c) use consistent, clear icons."
+TFB2033-R012,TFB2033,Understanding Users: Cognition (Week 3),Test 1; Quiz 1,Advanced,Understanding Users: Cognition: Case Study,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+An online exam page shows many pop-ups, small icons and a timer in the corner. Students make careless mistakes.
+
+**Questions**
+1. Which cognitive limits cause the problems?
+2. Suggest three design changes.
+
+**Discussion points:** limited attention and working memory, so remove unnecessary pop-ups, make the timer clear and consistent, and use larger, familiar icons."
+TFB2033-R013,TFB2033,Interface Design (Week 4),Test 1; Quiz 1,Beginner,Interface Design: Key Points (Interface design slides (Week 4)),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- The interface is how you accomplish tasks with a product: what you do and how it responds.
+- Design must consider users' needs, experience, and physical and mental limits, such as limited short-term memory, and must accept that people make mistakes.
+- Six general principles: user familiarity, consistency, minimal surprise, recoverability, user guidance and user diversity.
+- Recognition is easier than recall, so show options instead of asking users to remember commands.
+- Recoverability includes undo, confirmation of destructive actions and soft deletes. User diversity includes options such as larger text.
+
+*Source: Interface design slides (Week 4)*"
+TFB2033-R014,TFB2033,Interface Design (Week 4),Test 1; Quiz 1,Beginner,Interface Design: Worked Example,Worked Example,Basic,Foundational Learning,Guided Practice,,"**Applying the principles**
+
+For a file manager:
+- User familiarity: use words such as ""folders"" and ""documents"" instead of technical names.
+- Recoverability: provide undo and ask before permanent deletion.
+
+*Source: Interface design slides (Week 4)*"
+TFB2033-R015,TFB2033,Interface Design (Week 4),Test 1; Quiz 1,Intermediate,Interface Design: Practice Exercise,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Name the principle that is broken: (a) the same action uses different shortcuts on two screens, (b) files are deleted with no confirmation, (c) an error shows only ""0x80070005"".
+
+**Answer key:** (a) consistency, (b) recoverability, (c) user guidance (and familiarity)."
+TFB2033-R016,TFB2033,Interface Design (Week 4),Test 1; Quiz 1,Advanced,Interface Design: Case Study,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+A government form website is used by elderly people. Many give up or enter wrong information.
+
+**Questions**
+1. Which principles are being missed?
+2. List four design changes.
+
+**Discussion points:** user diversity, guidance and recoverability, so use larger text, clear help, helpful error messages and a way to review and correct answers before submitting."
+TFB2033-R017,TFB2033,Understanding Needs and Establishing Requirements (Week 6),Test 2; Quiz 2,Beginner,Understanding Needs and Establishing Requirements: Key Points (Needs and requirements slides (Week 6)),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- Requirements gathering is where projects fail most often, so it is important to understand users, tasks and context, and to produce a stable set of requirements.
+- We ""establish"" requirements so that each one is justified by data collected from users.
+- Types include user requirements (who the users are and their skills and attitudes) and usability requirements (such as learnability, throughput, flexibility and attitude).
+- Data gathering techniques: questionnaires (good for many people), interviews (structured, unstructured or semi-structured), focus groups and observation.
+- Quantitative data answers how much or how many. Qualitative data answers what, how and why.
+
+*Source: Needs and requirements slides (Week 6)*"
+TFB2033-R018,TFB2033,Understanding Needs and Establishing Requirements (Week 6),Test 2; Quiz 2,Beginner,Understanding Needs and Establishing Requirements: Worked Example,Worked Example,Basic,Foundational Learning,Guided Practice,,"**Choosing a technique**
+
+- Opinions of 500 students: use a questionnaire.
+- Deep reasons behind a problem: use interviews.
+- What people actually do: use observation.
+
+*Source: Needs and requirements slides (Week 6)*"
+TFB2033-R019,TFB2033,Understanding Needs and Establishing Requirements (Week 6),Test 2; Quiz 2,Intermediate,Understanding Needs and Establishing Requirements: Practice Exercise,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Choose a technique and justify it: (a) a quick survey of 300 users, (b) understanding why a small group struggles with an app, (c) seeing how staff really use a system. Then say which of ""How many students use it?"" and ""Why do they stop using it?"" is quantitative.
+
+**Answer key (sample):** (a) questionnaire, (b) interviews or a focus group, (c) observation. ""How many"" is quantitative and ""why"" is qualitative."
+TFB2033-R020,TFB2033,Understanding Needs and Establishing Requirements (Week 6),Test 2; Quiz 2,Advanced,Understanding Needs and Establishing Requirements: Case Study,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+You are asked to build a campus event app. You have two weeks to gather requirements.
+
+**Questions**
+1. Who are the stakeholders?
+2. Which data gathering techniques will you combine, and why?
+3. How will you turn the data into requirements?
+
+**Discussion points:** students, organisers and staff, combine questionnaires with a few interviews, and link each requirement back to the data collected."
+TFB2033-R021,TFB2033,Usability and Usability Engineering (Week 8),Test 2; Quiz 2,Beginner,Usability and Usability Engineering: Key Points (Usability and usability engineering slides),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- Usability is a quality attribute that measures how easy a user interface is to use. The term also refers to methods for improving ease of use during design.
+- Five quality components: learnability, efficiency, memorability, errors (how many, how severe, how easily fixed) and satisfaction.
+- Usability engineering is a methodical, iterative process of design, implement and evaluate, across the whole product life cycle with important activities early on.
+- Jakob Nielsen's ten usability heuristics are a set of guidelines for good interfaces.
+- A usability study plan covers goals, format and setting, number and type of users, tasks, a pilot study, metrics and a test plan.
+
+*Source: Usability and usability engineering slides*"
+TFB2033-R022,TFB2033,Usability and Usability Engineering (Week 8),Test 2; Quiz 2,Beginner,Usability and Usability Engineering: Worked Example,Worked Example,Basic,Foundational Learning,Guided Practice,,"**Measuring a login page**
+
+- Learnability: how long first-time users take to log in.
+- Efficiency: how long experienced users take.
+- Errors: how many failed attempts and how easily users recover.
+- Satisfaction: a rating after use.
+
+*Source: Usability and usability engineering slides*"
+TFB2033-R023,TFB2033,Usability and Usability Engineering (Week 8),Test 2; Quiz 2,Intermediate,Usability and Usability Engineering: Practice Exercise,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Name the usability component: (a) a user returns after months and forgets how to book a room, (b) booking takes three clicks, (c) users often enter the wrong date.
+
+**Answer key:** (a) memorability, (b) efficiency, (c) errors."
+TFB2033-R024,TFB2033,Usability and Usability Engineering (Week 8),Test 2; Quiz 2,Advanced,Usability and Usability Engineering: Case Study,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+You plan a usability study for a university library website.
+
+**Questions**
+1. Write the study goal and three tasks.
+2. Which metrics would you collect?
+3. Why run a pilot first?
+
+**Discussion points:** for example, goal to find where users struggle to locate books, tasks such as finding a book and renewing a loan, metrics such as time, errors and satisfaction, and a pilot to fix problems in the test itself."
+TFB2033-R025,TFB2033,Usability Testing (Week 8),Test 2; Quiz 2,Beginner,Usability Testing: Key Points (Usability testing slides),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- Usability testing evaluates a product by testing it with users. Users try typical tasks while observers watch, listen and take notes.
+- ISO 9241-11 defines usability as the extent to which specified users can achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use.
+- The goals are to find usability problems, collect quantitative performance data and measure user satisfaction.
+- Ask users to think aloud, do not help them, and make clear that you are testing the product, not the user.
+- Testing early with 3 to 5 users is useful, and it is less cost-effective when done late in development. Testing can be formal (a lab) or informal.
+
+*Source: Usability testing slides*"
+TFB2033-R026,TFB2033,Usability Testing (Week 8),Test 2; Quiz 2,Beginner,Usability Testing: Worked Example,Worked Example,Basic,Foundational Learning,Guided Practice,,"**A think-aloud session**
+
+A participant says, ""I am looking for the submit button, but I only see a small arrow.""
+The observer notes the problem and does not help. This shows the button is hard to notice, which is a usability problem to fix.
+
+*Source: Usability testing slides*"
+TFB2033-R027,TFB2033,Usability Testing (Week 8),Test 2; Quiz 2,Intermediate,Usability Testing: Practice Exercise,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Write three tasks for testing a hostel booking app, and one measure for each.
+
+**Answer key (sample):** find an available room (time taken), book a room (number of errors), cancel a booking (success or failure and satisfaction rating)."
+TFB2033-R028,TFB2033,Usability Testing (Week 8),Test 2; Quiz 2,Advanced,Usability Testing: Case Study,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+A team tests a nearly finished product with 20 users and finds major navigation problems, but there is no time to fix them.
+
+**Questions**
+1. What went wrong with the testing plan?
+2. How should they test in future?
+
+**Discussion points:** testing late is expensive, so test early and often with 3 to 5 users each round, and fix problems between rounds."
+TFB2033-R029,TFB2033,Expert Evaluation (Week 9),Test 2; Quiz 2,Beginner,Expert Evaluation: Key Points (Expert evaluation slides),Lecture Notes,Basic,Foundational Learning,Concept Review,,"**Key points**
+
+- Inspection methods let experts judge a design without users: cognitive walkthrough, heuristic evaluation and review-based evaluation.
+- A cognitive walkthrough focuses on ease of learning for first-time users. The expert walks through each step and tells a credible story about what a novice would do.
+- For each step ask: will the user try to achieve the right effect, notice that the correct action is available, link the action to the effect they want, and see that progress is being made?
+- A cognitive walkthrough suits walk-up-and-use systems such as kiosks and ATMs, and is less suitable for complex software used by experts.
+- Heuristic evaluation checks the interface against recognised usability principles.
+
+*Source: Expert evaluation slides*"
+TFB2033-R030,TFB2033,Expert Evaluation (Week 9),Test 2; Quiz 2,Beginner,Expert Evaluation: Worked Example,Worked Example,Basic,Foundational Learning,Guided Practice,,"**Cognitive walkthrough of a kiosk step**
+
+Step: ""Tap the green Pay button.""
+- Will the user try to pay? Yes, their goal is to buy a ticket.
+- Will they notice the button? Yes, it is large and green.
+- Will they link the button to paying? Yes, it is labelled Pay.
+- Will they see progress? Yes, a confirmation screen appears.
+
+*Source: Expert evaluation slides*"
+TFB2033-R031,TFB2033,Expert Evaluation (Week 9),Test 2; Quiz 2,Intermediate,Expert Evaluation: Practice Exercise,Practice Exercise,Intermediate,Reinforcement and Guided Practice,Practice Exercise,,"**Task**
+Answer the four walkthrough questions for the step ""Press the small icon in the corner to print your receipt"", and say whether a cognitive walkthrough suits an ATM or professional photo editing software.
+
+**Answer key (sample):** the icon is small and unlabelled, so users may not notice it or link it to printing, so the step fails. A walkthrough suits an ATM and is less suitable for complex professional software."
+TFB2033-R032,TFB2033,Expert Evaluation (Week 9),Test 2; Quiz 2,Advanced,Expert Evaluation: Case Study,Case Study,Advanced,Extension and Challenging Application,Case Study,,"**Scenario**
+A startup has a tight budget and no users yet. It must choose between heuristic evaluation and usability testing.
+
+**Questions**
+1. Which would you start with, and why?
+2. What would you do when real users become available?
+
+**Discussion points:** start with heuristic evaluation because it is cheap and needs no users, then run usability testing with 3 to 5 users to find problems experts miss."

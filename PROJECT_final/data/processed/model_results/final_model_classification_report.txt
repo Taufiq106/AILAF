@@ -1,0 +1,12 @@
+Final model: Random Forest
+Student-grouped 80/20 split, all four marks
+
+              precision    recall  f1-score   support
+
+    Beginner       0.63      0.59      0.61       321
+Intermediate       0.65      0.65      0.65      1018
+    Advanced       0.74      0.76      0.75      1073
+
+    accuracy                           0.69      2412
+   macro avg       0.67      0.66      0.67      2412
+weighted avg       0.69      0.69      0.69      2412
