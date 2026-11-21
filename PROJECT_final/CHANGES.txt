@@ -65,3 +65,16 @@ data/knowledge_base/topic_assessment_map.csv   adds the new topics. ASSUMPTION: 
                             Ask each lecturer to confirm.
 app_core.py                 Learning Dashboard has a Course selector (TFB1013, TFB2063, TFB2033)
 NOTE: the pre-test and post-test question bank is still for TFB1013 only.
+
+INSTRUCTIONS UPDATE
+evaluation_tools.py         every Evaluation tab starts with a "How to use this tab" box (Model Performance, Pre/Post Test,
+                            Student Feedback, Expert Review, Question Review, Results Summary); a session-steps banner at the top;
+                            a warning in Results Summary if sample (FAKE) data is still in the files
+app_core.py                 "How to use this page" box on the Learning Dashboard (marks as percentages, never enter the 22-question score)
+docs/AILAF_Evaluation_Instruments.docx   session steps and instructions added to each printed part
+
+QUESTION REVIEW REMOVED
+evaluation_tools.py   removed the Question Review tab, its save file (question_review.csv), the lecturer review
+                      section and download in Results Summary, and the include_review setting
+app_core.py           the Evaluation page is now called without the lecturer-version setting
+SECURITY.txt          removed the note about the Question Review tab

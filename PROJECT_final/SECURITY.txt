@@ -8,7 +8,6 @@ AILAF - SECURITY NOTES
    - Only one write to a data file happens at a time.
    - Streamlit XSRF protection is on and usage statistics are off (.streamlit/config.toml).
    - Marks typed into the dashboard are not saved.
-   - The Question Review tab (it shows the test answer key) appears only in app_ekb.py, so run app.py for students.
 
 2. NO PASSWORD (important)
    There is no login. Anyone who can open the app can see Evaluation > Results Summary

@@ -28,7 +28,6 @@ PREPOST_QUESTIONS = EVAL_DIR / "prepost_questions.csv"
 PREPOST_RESULTS = EVAL_DIR / "prepost_results.csv"
 STUDENT_FEEDBACK = EVAL_DIR / "student_feedback.csv"
 EXPERT_FEEDBACK = EVAL_DIR / "expert_feedback.csv"
-QUESTION_REVIEW = EVAL_DIR / "question_review.csv"
 
 CONSENT_TEXT = (
     "Participation is voluntary. Your responses are used only for this "
@@ -114,7 +113,48 @@ def read_file(path):
 # 1. MODEL PERFORMANCE (AI PERFORMANCE EVALUATION)
 # ============================================================
 
+
+# ============================================================
+# INSTRUCTIONS SHOWN AT THE TOP OF EACH TAB
+# ============================================================
+
+def how_to(steps, note=None, title="How to use this tab"):
+
+    with st.expander(title, expanded=True):
+
+        for number, step in enumerate(steps, start=1):
+            st.markdown(f"**{number}.** {step}")
+
+        if note:
+            st.caption(note)
+
+
+def sample_data_warning(*tables):
+
+    # warns when invented sample data (IDs starting with FAKE) is still in the files
+    for table, column in tables:
+
+        if not table.empty and column in table.columns:
+
+            if table[column].astype(str).str.startswith("FAKE").any():
+                st.warning(
+                    "Sample (fake) data is in these files. It is invented and must "
+                    "not be reported. Run  python fake_data.py remove  before real "
+                    "data collection."
+                )
+                return
+
 def render_model_performance():
+
+    how_to(
+        [
+            "Read the headline numbers: the final model, the number of students and its accuracy with all four marks.",
+            "Compare the three algorithms in the first table. The final model is the one with the best cross-validated macro F1.",
+            "Check the accuracy by marks available. More marks give better predictions, which is why Test 2 and Quiz 2 are optional.",
+            "Read the per-class table and the confusion matrix. Rows are the actual level and columns are the predicted level. Beginner is the weakest class.",
+        ],
+        "These results come from OULAD data converted to test and quiz format, not from real course marks. To regenerate them, run train_models.py."
+    )
 
     info_path = RESULTS_DIR / "final_model_info.json"
     comparison_path = RESULTS_DIR / "model_comparison.csv"
@@ -217,6 +257,16 @@ def render_model_performance():
 # ============================================================
 
 def render_prepost():
+
+    how_to(
+        [
+            "Type your Student ID (3 to 20 letters, numbers, - or _). Use the same ID for the pre-test and the post-test.",
+            "Choose Pre-test if you have not yet used AILAF, or Post-test if you have finished the Learning Dashboard.",
+            "Answer all 22 questions. Choose one answer for each, and do not use notes or other people.",
+            "Tick the consent box and press Submit Test. Your score is saved, and the correct answers are not shown.",
+        ],
+        "The score is out of 22 and is only used to measure learning. It is not your Test 1 or Quiz 1 mark, so do not enter it in the Learning Dashboard. If you submit twice, the latest score is used."
+    )
 
     st.write(
         "Take the pre-test before using AILAF and the post-test after. "
@@ -363,6 +413,16 @@ def render_questionnaire(title, items, path, key_prefix, who_label, who_options=
 
 def render_student_feedback():
 
+    how_to(
+        [
+            "Complete this after you have used the Learning Dashboard and taken the post-test.",
+            "Rate each of the 11 statements from 1 (strongly disagree) to 5 (strongly agree). Every statement must be answered.",
+            "Write any comments or suggestions if you want to. Your Student ID is optional.",
+            "Tick the consent box and press Submit.",
+        ],
+        "Please answer honestly. There are no right or wrong answers, and your answers do not affect your grades."
+    )
+
     render_questionnaire(
         "Student Feedback", STUDENT_ITEMS, STUDENT_FEEDBACK,
         "student", "Student ID (optional)"
@@ -371,113 +431,22 @@ def render_student_feedback():
 
 def render_expert_review():
 
+    how_to(
+        [
+            "Read the framework description and, if possible, see the prototype demonstrated or try the Learning Dashboard yourself. Choose your course and enter sample marks.",
+            "Choose your role. Your name and years of teaching experience are optional.",
+            "Rate each of the 9 statements from 1 (strongly disagree) to 5 (strongly agree), and write comments on what to improve.",
+            "Tick the consent box and press Submit.",
+        ],
+        "Your answers are reported as group results, and you are not named in the report."
+    )
+
     render_questionnaire(
         "Expert Review", EXPERT_ITEMS, EXPERT_FEEDBACK,
         "expert", "Your role",
         ["Lecturer", "Educational technology expert", "Other academic"],
         "Years of teaching experience (optional)"
     )
-
-
-# ============================================================
-# 4B. LECTURER REVIEW OF THE TEST QUESTIONS
-# ============================================================
-# Shows the correct answers, so this tab appears only in the
-# lecturer version (app_ekb.py), never in the student version.
-# ============================================================
-
-def render_question_review():
-
-    st.write(
-        "Please check each pre-test and post-test question. "
-        "The correct answer is shown for you."
-    )
-
-    st.warning("This page shows the answer key. It is for lecturers and the researcher only.")
-
-    if not PREPOST_QUESTIONS.exists():
-        st.warning("Question file not found: " + str(PREPOST_QUESTIONS))
-        return
-
-    questions = pd.read_csv(PREPOST_QUESTIONS)
-
-    with st.form("question_review_form"):
-
-        reviewer = st.text_input("Reviewer name")
-
-        for number, q in questions.iterrows():
-
-            correct = q["correct_option"]
-
-            st.markdown(f"**Q{number + 1}.** {q['question']}")
-
-            st.caption(
-                f"A. {q['option_a']}   |   B. {q['option_b']}   |   "
-                f"C. {q['option_c']}   |   D. {q['option_d']}"
-            )
-
-            st.caption(f"Correct answer: {correct}. {q['option_' + correct.lower()]}")
-
-            col1, col2 = st.columns(2)
-
-            with col1:
-                st.radio(
-                    "Answer correct?", ["Yes", "No"],
-                    index=None, horizontal=True, key=f"review_ok_{number}"
-                )
-
-            with col2:
-                st.radio(
-                    "Matches the course?", ["Yes", "No"],
-                    index=None, horizontal=True, key=f"review_match_{number}"
-                )
-
-            st.text_input(
-                "Change needed or comment (optional)",
-                key=f"review_note_{number}"
-            )
-
-            st.divider()
-
-        overall = st.radio(
-            "Overall",
-            ["Approved as written", "Approved with the changes above", "Needs a major revision"],
-            index=None
-        )
-
-        submitted = st.form_submit_button("Submit review", type="primary")
-
-    if submitted:
-
-        name = safe_text(reviewer, 100)
-
-        if not name:
-            st.error("Please enter the reviewer name.")
-            return
-
-        ok = [st.session_state.get(f"review_ok_{n}") for n in range(len(questions))]
-        match = [st.session_state.get(f"review_match_{n}") for n in range(len(questions))]
-
-        if any(v is None for v in ok + match) or overall is None:
-            st.error("Please answer every question and choose the overall result.")
-            return
-
-        stamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-        for number, q in questions.iterrows():
-
-            save_row(QUESTION_REVIEW, {
-                "timestamp": stamp,
-                "reviewer": name,
-                "question_id": q["question_id"],
-                "topic": q["topic"],
-                "answer_correct": ok[number],
-                "matches_course": match[number],
-                "comment": safe_text(st.session_state.get(f"review_note_{number}", ""), 500),
-                "overall": overall
-            })
-
-        st.success("Thank you. Your review was saved.")
 
 
 # ============================================================
@@ -504,9 +473,25 @@ def group_means(data, items):
 
 def render_results_summary():
 
+    how_to(
+        [
+            "Check the counts at the top: test submissions, student questionnaires and expert questionnaires.",
+            "Read the learning gain. It uses only students who completed both the pre-test and the post-test.",
+            "Read the questionnaire means for students and experts.",
+            "Use the download buttons to export the raw data for analysis.",
+        ],
+        "The raw data contains Student IDs. Keep it private and remove the IDs before reporting. For the report, use the real data only."
+    )
+
     prepost = read_file(PREPOST_RESULTS)
     students = read_file(STUDENT_FEEDBACK)
     experts = read_file(EXPERT_FEEDBACK)
+
+    sample_data_warning(
+        (prepost, "student_id"),
+        (students, "respondent"),
+        (experts, "respondent")
+    )
 
     a, b, c = st.columns(3)
     a.metric("Test submissions", len(prepost))
@@ -564,41 +549,12 @@ def render_results_summary():
     else:
         st.dataframe(group_means(experts, EXPERT_ITEMS), hide_index=True)
 
-    reviews = read_file(QUESTION_REVIEW)
-
-    st.subheader("Lecturer review of test questions")
-
-    if reviews.empty:
-        st.info("No question reviews yet.")
-    else:
-
-        summary = reviews.groupby(["question_id", "topic"]).agg(
-            Reviews=("reviewer", "count"),
-            Not_correct=("answer_correct", lambda x: int((x == "No").sum())),
-            Not_matching_course=("matches_course", lambda x: int((x == "No").sum()))
-        ).reset_index()
-
-        flagged = summary[(summary["Not_correct"] > 0) | (summary["Not_matching_course"] > 0)]
-
-        st.write(f"{reviews['reviewer'].nunique()} reviewer(s). Questions flagged: {len(flagged)}.")
-
-        st.dataframe(summary, hide_index=True)
-
-        comments = reviews[reviews["comment"].fillna("").astype(str).str.strip() != ""]
-
-        if not comments.empty:
-            st.dataframe(
-                comments[["reviewer", "question_id", "comment"]],
-                hide_index=True
-            )
-
     st.subheader("Download raw data")
 
     for label, data, name in [
         ("Test results", prepost, "prepost_results.csv"),
         ("Student feedback", students, "student_feedback.csv"),
-        ("Expert feedback", experts, "expert_feedback.csv"),
-        ("Question review", reviews, "question_review.csv")
+        ("Expert feedback", experts, "expert_feedback.csv")
     ]:
         if not data.empty:
             st.download_button(
@@ -613,7 +569,7 @@ def render_results_summary():
 # EVALUATION PAGE
 # ============================================================
 
-def render_evaluation_page(include_review=False):
+def render_evaluation_page():
 
     st.title("Evaluation")
 
@@ -622,15 +578,18 @@ def render_evaluation_page(include_review=False):
         "and expert validation."
     )
 
+    st.info(
+        "**Student session:** 1. Pre-test, 2. Use the Learning Dashboard (enter your own "
+        "course marks and follow your pathway), 3. Post-test, 4. Student Feedback.   "
+        "**Experts:** use Expert Review."
+    )
+
     names = [
         "Model Performance",
         "Pre/Post Test",
         "Student Feedback",
         "Expert Review"
     ]
-
-    if include_review:
-        names.append("Question Review")
 
     names.append("Results Summary")
 
@@ -647,10 +606,6 @@ def render_evaluation_page(include_review=False):
 
     with tabs["Expert Review"]:
         render_expert_review()
-
-    if include_review:
-        with tabs["Question Review"]:
-            render_question_review()
 
     with tabs["Results Summary"]:
         render_results_summary()

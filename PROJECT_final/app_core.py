@@ -236,6 +236,24 @@ def render_dashboard():
 
     st.title("Welcome to Your Learning Dashboard")
 
+    with st.expander("How to use this page", expanded=False):
+
+        st.markdown("**1.** Choose your course.")
+        st.markdown(
+            "**2.** Enter your real course marks as percentages from 0 to 100. "
+            "Test 1 and Quiz 1 are required. Test 2 and Quiz 2 are optional, so tick the box only if you have them."
+        )
+        st.markdown(
+            "**3.** If a mark is out of something else, convert it first: mark divided by the maximum, times 100. "
+            "For example, 4 out of 5 is 80."
+        )
+        st.markdown("**4.** Choose a topic (or all topics) and the formats you prefer, then press Generate Learning Pathway.")
+        st.markdown("**5.** Read why the pathway was chosen, then study the resources in order and try the practice quizzes.")
+        st.caption(
+            "Do not enter your pre-test or post-test score here. Those are separate and are out of 22. "
+            "Your marks typed here are not saved."
+        )
+
     st.write(
         "Enter your marks to see your predicted competency and a learning "
         "pathway aligned with your assessments."
@@ -860,7 +878,7 @@ def run(include_ekb=False):
             render_dashboard()
 
         elif page == "Evaluation":
-            render_evaluation_page(include_ekb)
+            render_evaluation_page()
 
         elif page == "EKB Management":
             render_ekb()
