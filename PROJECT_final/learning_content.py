@@ -5,8 +5,10 @@ from datetime import datetime
 
 from security import safe_text, clean_id, WRITE_LOCK
 
-QUIZ_PATH = Path("data/knowledge_base/quizzes.csv")
-RESULTS_PATH = Path("data/quiz_results.csv")
+BASE_DIR = Path(__file__).resolve().parent
+
+QUIZ_PATH = BASE_DIR / "data" / "knowledge_base" / "quizzes.csv"
+RESULTS_PATH = BASE_DIR / "data" / "quiz_results.csv"
 
 
 def load_quizzes():
@@ -40,7 +42,10 @@ def render_quiz(resource):
     quizzes = load_quizzes()
 
     if quizzes.empty:
-        st.info("Quiz file not found.")
+        if not QUIZ_PATH.exists():
+            st.info("Quiz file not found. Expected at: " + str(QUIZ_PATH))
+        else:
+            st.info("The quiz file is empty.")
         return
 
     questions = quizzes[
